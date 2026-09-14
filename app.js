@@ -1,6 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - Simplified App Core Logic
- * Fixes batch cooking double-counting bug.
+ * Erasmus Meal & Grocery Planner - Simplified App Core Logic (Apple Sheet UI)
  */
 
 let currentMenu = CURRENT_REAL_WEEK_MENU;
@@ -78,7 +77,7 @@ function renderMealSlot(recipeId, slotTitle) {
             <div class="slot-label">${slotTitle}</div>
             <div class="meal-title">${recipe.name}</div>
             <div class="meal-meta">
-              <span>${recipe.prepTime} min</span> • 
+              <span>⏱️ ${recipe.prepTime} min</span> • 
               <span>${recipe.tags.join(', ')}</span>
             </div>
           </div>
@@ -92,38 +91,50 @@ function renderMealSlot(recipeId, slotTitle) {
   return '';
 }
 
-// RECIPE MODAL DETAILS
+// RECIPE MODAL DETAILS (APPLE KEYNOTE SHEET)
 function openRecipeModal(recipeId) {
   const recipe = getRecipeById(recipeId);
   if (!recipe) return;
 
+  const catPill = document.getElementById('modal-recipe-cat');
+  if (catPill) catPill.textContent = recipe.category ? recipe.category.toUpperCase() : 'RECETTE';
+
   document.getElementById('modal-recipe-title').textContent = recipe.name;
-  document.getElementById('modal-recipe-time').textContent = `${recipe.prepTime} min`;
-  document.getElementById('modal-recipe-servings').textContent = `${recipe.servings} portion(s)`;
+  document.getElementById('modal-recipe-time').textContent = `⏱️ ${recipe.prepTime} min`;
+  document.getElementById('modal-recipe-servings').textContent = `👤 ${recipe.servings} portion(s)`;
   document.getElementById('modal-recipe-tip').innerHTML = `<strong>Astuce Bergame :</strong> ${recipe.bergamoTip}`;
 
   // Render ingredients
   const ingContainer = document.getElementById('modal-ingredients-list');
   ingContainer.innerHTML = '';
-  recipe.ingredients.forEach(ing => {
-    const item = document.createElement('div');
-    item.className = 'ingredient-item';
-    item.style.cursor = 'default';
-    item.innerHTML = `
-      <div class="ing-name-qty">
-        <span class="ing-name">${ing.name}</span>
+  
+  if (recipe.ingredients && recipe.ingredients.length > 0) {
+    recipe.ingredients.forEach(ing => {
+      const item = document.createElement('div');
+      item.className = 'ingredient-item';
+      item.style.cursor = 'default';
+      item.innerHTML = `
+        <div class="ing-name-qty">
+          <span class="ing-name">${ing.name}</span>
+        </div>
+        <span class="ing-qty">${ing.amount} ${ing.unit}</span>
+      `;
+      ingContainer.appendChild(item);
+    });
+  } else {
+    ingContainer.innerHTML = `
+      <div style="font-size: 0.88rem; color: var(--secondary-text); background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 14px 18px;">
+        📦 Tous les ingrédients nécessaires pour cette recette proviennent de ton stock existant.
       </div>
-      <span class="ing-qty">${ing.amount} ${ing.unit}</span>
     `;
-    ingContainer.appendChild(item);
-  });
+  }
 
   // Render steps
   const stepsContainer = document.getElementById('modal-steps-list');
   stepsContainer.innerHTML = '';
   recipe.steps.forEach((step, idx) => {
     const stepEl = document.createElement('div');
-    stepEl.className = 'step-item';
+    stepEl.className = 'step-card';
     stepEl.innerHTML = `
       <div class="step-num">${idx + 1}</div>
       <div>${step}</div>
@@ -144,7 +155,7 @@ function closeRecipeModalDirect() {
   document.getElementById('recipe-modal').classList.remove('active');
 }
 
-// GROCERY LIST AGGREGATION (Handles batch cooking deduplication)
+// GROCERY LIST AGGREGATION
 function renderGroceryList() {
   const categoriesContainer = document.getElementById('grocery-categories-container');
   if (!categoriesContainer) return;
@@ -157,7 +168,6 @@ function renderGroceryList() {
     ['midi', 'soir'].forEach(slot => {
       const recipeId = day[slot];
       if (recipeId) {
-        // For batch recipes (servings > 1 cooked once for 2 days), count ingredients only ONCE per week batch!
         if (processedBatchRecipes.has(recipeId)) return;
 
         const recipe = getRecipeById(recipeId);

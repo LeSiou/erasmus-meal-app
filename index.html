@@ -31,8 +31,8 @@
     <section id="view-calendar" class="view-section active">
       <div class="section-header">
         <h2 class="section-title">Menu de la Semaine</h2>
-        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 2px;">
-          Cliquez sur un repas pour consulter la recette et la préparation (<30 min)
+        <p style="color: var(--secondary-text); font-size: 0.9rem;">
+          Cliquez sur un repas pour consulter la fiche recette et sa préparation rapide (<30 min)
         </p>
       </div>
 
@@ -45,7 +45,7 @@
     <section id="view-grocery" class="view-section">
       <div class="section-header">
         <h2 class="section-title">Liste de Courses</h2>
-        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 2px;">
+        <p style="color: var(--secondary-text); font-size: 0.9rem;">
           Ingrédients nécessaires classés par rayon de supermarché
         </p>
       </div>
@@ -68,13 +68,14 @@
 
   </main>
 
-  <!-- MODAL DRAWER FOR RECIPE DETAILS -->
+  <!-- MODAL DRAWER FOR RECIPE DETAILS (APPLE SHEET) -->
   <div class="modal-overlay" id="recipe-modal" onclick="closeRecipeModal(event)">
     <div class="modal-drawer" onclick="event.stopPropagation()">
       <div class="modal-handle"></div>
       
       <div class="modal-header">
         <div>
+          <span class="recipe-category-pill" id="modal-recipe-cat">PÂTES & RIZ</span>
           <h2 class="recipe-modal-title" id="modal-recipe-title">Titre Recette</h2>
           <div class="recipe-modal-meta">
             <span id="modal-recipe-time">20 min</span> • 
@@ -89,7 +90,7 @@
       </div>
 
       <h3 class="modal-section-title">Ingrédients</h3>
-      <div class="ingredient-list" id="modal-ingredients-list" style="margin-bottom: 20px;">
+      <div class="ingredient-list" id="modal-ingredients-list" style="margin-bottom: 24px;">
         <!-- Rendered dynamically -->
       </div>
 
