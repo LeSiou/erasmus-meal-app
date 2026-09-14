@@ -1,5 +1,6 @@
 /**
- * Erasmus Meal & Grocery Planner - Simplified App Core Logic (Apple Sheet UI)
+ * Erasmus Meal & Grocery Planner - Simplified App Core Logic
+ * Recipe modal displays FULL recipe ingredients. Grocery list displays ONLY items to buy.
  */
 
 let currentMenu = CURRENT_REAL_WEEK_MENU;
@@ -91,7 +92,7 @@ function renderMealSlot(recipeId, slotTitle) {
   return '';
 }
 
-// RECIPE MODAL DETAILS (APPLE KEYNOTE SHEET)
+// RECIPE MODAL DETAILS (Displays ALL recipe ingredients for cooking)
 function openRecipeModal(recipeId) {
   const recipe = getRecipeById(recipeId);
   if (!recipe) return;
@@ -104,7 +105,7 @@ function openRecipeModal(recipeId) {
   document.getElementById('modal-recipe-servings').textContent = `👤 ${recipe.servings} portion(s)`;
   document.getElementById('modal-recipe-tip').innerHTML = `<strong>Astuce Bergame :</strong> ${recipe.bergamoTip}`;
 
-  // Render ingredients
+  // Render ALL ingredients needed for the recipe
   const ingContainer = document.getElementById('modal-ingredients-list');
   ingContainer.innerHTML = '';
   
@@ -115,18 +116,12 @@ function openRecipeModal(recipeId) {
       item.style.cursor = 'default';
       item.innerHTML = `
         <div class="ing-name-qty">
-          <span class="ing-name">${ing.name}</span>
+          <span class="ing-name">${ing.name} ${ing.bought ? '<span style="font-size:0.75rem; color:var(--secondary-text); margin-left:6px;">(À acheter)</span>' : '<span style="font-size:0.75rem; color:var(--tertiary-text); margin-left:6px;">(En stock)</span>'}</span>
         </div>
         <span class="ing-qty">${ing.amount} ${ing.unit}</span>
       `;
       ingContainer.appendChild(item);
     });
-  } else {
-    ingContainer.innerHTML = `
-      <div style="font-size: 0.88rem; color: var(--secondary-text); background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 14px 18px;">
-        📦 Tous les ingrédients nécessaires pour cette recette proviennent de ton stock existant.
-      </div>
-    `;
   }
 
   // Render steps
@@ -155,7 +150,7 @@ function closeRecipeModalDirect() {
   document.getElementById('recipe-modal').classList.remove('active');
 }
 
-// GROCERY LIST AGGREGATION
+// GROCERY LIST AGGREGATION (Filters ONLY items marked bought: true)
 function renderGroceryList() {
   const categoriesContainer = document.getElementById('grocery-categories-container');
   if (!categoriesContainer) return;
@@ -177,16 +172,19 @@ function renderGroceryList() {
           }
 
           recipe.ingredients.forEach(ing => {
-            const key = `${ing.name.toLowerCase()}_${ing.unit}`;
-            if (!aggregated[key]) {
-              aggregated[key] = {
-                name: ing.name,
-                amount: ing.amount,
-                unit: ing.unit,
-                rayon: ing.rayon
-              };
-            } else {
-              aggregated[key].amount += ing.amount;
+            // Include ONLY ingredients that need to be bought!
+            if (ing.bought) {
+              const key = `${ing.name.toLowerCase()}_${ing.unit}`;
+              if (!aggregated[key]) {
+                aggregated[key] = {
+                  name: ing.name,
+                  amount: ing.amount,
+                  unit: ing.unit,
+                  rayon: ing.rayon
+                };
+              } else {
+                aggregated[key].amount += ing.amount;
+              }
             }
           });
         }

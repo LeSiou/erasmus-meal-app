@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Database of Student Recipes for Bergamo
- * Strictly matched with Alessio's explicit 5 items purchased this week.
+ * Complete recipe ingredients for cooking + bought flags for shopping list.
  */
 
 const RECIPES_DB = [
@@ -12,12 +12,17 @@ const RECIPES_DB = [
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [], // Stock
+    ingredients: [
+      { name: "Pâtes fraîches épinards & ricotta", amount: 150, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Beurre ou Huile d'olive", amount: 1, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Parmesan râpé", amount: 20, unit: "g", rayon: "Crémerie & Fromages", bought: false }
+    ],
     steps: [
       "Plonger les pâtes fraîches du stock dans l'eau bouillante salée 2 à 3 minutes.",
-      "Égoutter et réchauffer à la poêle ou au micro-ondes."
+      "Égoutter en conservant un peu d'eau de cuisson.",
+      "Mélanger avec une noisette de beurre ou un filet d'huile d'olive et saupoudrer de parmesan."
     ],
-    bergamoTip: "Repas zéro effort du lundi soir avec tes restes de pâtes fraîches."
+    bergamoTip: "Les pâtes fraîches farcies au rayon frais d'Esselunga ou Conad sont excellentes et prêtes en 3 min."
   },
   {
     id: "chili-con-carne-express",
@@ -27,7 +32,13 @@ const RECIPES_DB = [
     cost: "€",
     servings: 2, // Mardi + Mercredi
     tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [], // Ingrédients en stock
+    ingredients: [
+      { name: "Viande hachée de bœuf", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Haricots rouges en boîte", amount: 1, unit: "petite boîte", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Coulis de tomate nature", amount: 1, unit: "briquette (200g)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Gousse d'ail", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: false },
+      { name: "Riz blanc", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+    ],
     steps: [
       "Faire cuire le riz du stock dans de l'eau bouillante salée.",
       "Dans une poêle, faire revenir la moitié de la viande hachée (stock) avec l'ail du stock.",
@@ -45,7 +56,10 @@ const RECIPES_DB = [
     servings: 2, // Jeudi + Vendredi
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Courgettes fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes" }
+      { name: "Lamelles de poulet", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Courgettes fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Riz blanc", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Curry en poudre", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "Faire cuire le riz du stock dans de l'eau bouillante salée.",
@@ -64,7 +78,9 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pain ou paquet de pain de mie", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents" }
+      { name: "Œufs frais", amount: 2, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Épinards frais", amount: 50, unit: "g", rayon: "Fruits & Légumes", bought: false },
+      { name: "Pain ou paquet de pain de mie", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true }
     ],
     steps: [
       "Faire réduire les épinards du stock 1 min dans la poêle chaude.",
@@ -82,7 +98,9 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Aubergine", amount: 1, unit: "pièce", rayon: "Fruits & Légumes" }
+      { name: "Pâtes (Penne / Rigatoni)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Aubergine", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Pancetta en dés", amount: 100, unit: "g", rayon: "Charcuterie & Traiteur", bought: false }
     ],
     steps: [
       "Couper l'aubergine achetée en dés et la rôtir à l'Air Fryer (15 min à 190°C).",
@@ -99,7 +117,11 @@ const RECIPES_DB = [
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume"],
-    ingredients: [], // Tout en stock
+    ingredients: [
+      { name: "Thon au naturel", amount: 1, unit: "boîte", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Œufs durs", amount: 2, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Salade fraîche", amount: 1, unit: "poignée", rayon: "Fruits & Légumes", bought: false }
+    ],
     steps: [
       "Cuire 2 œufs du stock pendant 10 min pour faire des œufs durs.",
       "Mélanger la salade du stock avec le thon du stock et les œufs durs en quartiers."
@@ -115,8 +137,9 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Grosse tomate fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes" },
-      { name: "Boule de mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages" }
+      { name: "Focaccia nature", amount: 1, unit: "pièce", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Grosse tomate fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Boule de mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true }
     ],
     steps: [
       "Ouvrir la focaccia du stock.",
