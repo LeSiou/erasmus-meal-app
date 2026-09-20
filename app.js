@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v14.0 Integer Rounding & 4 Speck Tranches)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v15.0 Practical 2 Cutlets Poultry Pack)
  */
 
 function forceAppRefresh() {

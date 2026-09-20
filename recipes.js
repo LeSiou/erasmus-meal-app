@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Validated Week 2 Menu (Bergamo)
- * Exact Speck Portions (4 tranches), Sauce Tomate in stock, Clean 1 Sachet Salad
+ * Practical Supermarket Reality: 1 Pack of 2 Turkey Cutlets (Mardi + Vendredi)
  */
 
 const RECIPES_DB = [
@@ -34,18 +34,18 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Dés de dinde ou poulet", amount: 120, unit: "g", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Escalopes de dinde ou poulet", amount: 1, unit: "escalope (125g)", rayon: "Boucherie & Poisson", bought: true },
       { name: "Œufs frais", amount: 1, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true },
       { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
       { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Cuire 70g de riz basmati al dente et le laisser tiédir.",
-      "2. Faire dorer 120g de dés de dinde (1/3 de la barquette) 5 min à la poêle.",
+      "2. Couper 1 escalope de dinde en dés et la faire dorer 5 min à la poêle.",
       "3. Casser 1 œuf de ta boîte directement dans la poêle et mélanger vivement.",
       "4. Incorporer le riz et servir avec 1/3 du sachet de salade verte."
     ],
-    bergamoTip: "Utilise 1/3 de ta barquette de dinde et 1/3 de ton sachet de salade !"
+    bergamoTip: "Utilise la 1ère escalope de ton paquet de 2 !"
   },
   {
     id: "salade-italienne-mozza-speck",
@@ -68,7 +68,7 @@ const RECIPES_DB = [
       "3. Déposer 1 boule de Mozzarella au centre, arroser d'huile d'olive, sel et poivre.",
       "4. Servir avec 2 tranches de pain grillé du stock."
     ],
-    bergamoTip: "Utilise 1 des 2 boules de mozza et 2 tranches de speck sur les 4 du paquet !"
+    bergamoTip: "Utilise 1 des 2 boules de mozza et 2 tranches de speck du paquet !"
   },
   {
     id: "pates-sauce-maison",
@@ -99,17 +99,17 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Dés de dinde ou poulet", amount: 150, unit: "g", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Escalopes de dinde ou poulet", amount: 1, unit: "escalope (125g)", rayon: "Boucherie & Poisson", bought: true },
       { name: "Pommes de terre fraîches", amount: 250, unit: "g", rayon: "Fruits & Légumes", bought: true },
       { name: "Courgettes fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
       "1. Couper 2-3 pommes de terre et 1 courgette en petits dés.",
       "2. Rissoler les pommes de terre 10 min à la poêle dans l'huile d'olive, puis ajouter la courgette 6 min.",
-      "3. Faire dorer les dés de dinde (portion 1/3 barquette) 5 min.",
-      "4. Mélanger le tout, assaisonner et servir bien chaud."
+      "3. Poêler la 2ème escalope de dinde 4-5 min de chaque côté jusqu'à ce qu'elle soit dorée.",
+      "4. Assaisonner et servir bien chaud."
     ],
-    bergamoTip: "Repas complet et équilibré pour le vendredi soir."
+    bergamoTip: "Utilise la 2ème et dernière escalope de ton paquet !"
   },
   {
     id: "piadina-speck-mozza",
@@ -129,10 +129,10 @@ const RECIPES_DB = [
     steps: [
       "1. Trancher la 2ème boule de Mozzarella et 1 tomate.",
       "2. Chauffer 1 piadina du paquet dans une poêle à sec pendant 1 minute.",
-      "3. Garnir avec les 2 tranches de Speck restantes, la mozzarella, les tranches de tomate et le 1/3 de salade restant.",
+      "3. Garnir avec les 2 tranches de Speck restantes, la mozzarella, les tranches de tomate et le dernier 1/3 de salade.",
       "4. Plier en deux et chauffer 1 min."
     ],
-    bergamoTip: "Permet de finir le paquet de speck, la 2ème mozza et le sachet de salade !"
+    bergamoTip: "Finit le paquet de speck, la 2ème mozza et le sachet de salade !"
   },
   {
     id: "saumon-papillote-haricots-riz",
@@ -156,25 +156,24 @@ const RECIPES_DB = [
     bergamoTip: "Ton seul repas de poisson de la semaine, sain et léger !"
   },
   {
-    id: "pates-cremeuses-dinde-epinards",
-    name: "Pâtes crémeuses à la dinde & épinards frais",
+    id: "pates-cremeuses-epinards-parmesan",
+    name: "Pâtes crémeuses aux épinards & parmesan",
     category: "Pâtes & Riz",
-    prepTime: 18,
+    prepTime: 15,
     cost: "€",
     servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
+    tags: ["Légume", "Féculent"],
     ingredients: [
-      { name: "Dés de dinde ou poulet", amount: 120, unit: "g", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Épinards (congélateur)", amount: 80, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pâtes (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Épinards (congélateur)", amount: 100, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuire 80g de pâtes du stock al dente.",
-      "2. Dorer le dernier 1/3 de dés de dinde à la poêle 5 min, puis ajouter les épinards du congel 3 min.",
-      "3. Ajouter un filet d'huile d'olive et 2 C. à soupe d'eau de cuisson.",
-      "4. Mélanger aux pâtes chaudes et servir."
+      "1. Cuire 90g de pâtes du stock al dente.",
+      "2. Faire revenir les épinards du congel 4 min à la poêle dans un filet d'huile d'olive.",
+      "3. Ajouter 2 C. à soupe d'eau de cuisson des pâtes et 2 C. à soupe de parmesan du stock.",
+      "4. Mélanger aux pâtes chaudes et déguster chaud."
     ],
-    bergamoTip: "Utilise le dernier tiers de dinde et tes épinards du congel !"
+    bergamoTip: "Repas du dimanche midi 100% stock, zéro viande fraîche à conserver !"
   },
   {
     id: "tarte-thon-sauce-tomate-fromage",
@@ -196,7 +195,7 @@ const RECIPES_DB = [
       "3. Recouvrir généreusement du sachet de fromage râpé.",
       "4. Enfourner 20 min à 190°C jusqu'à ce que le fromage soit bien gratiné et servir chaud."
     ],
-    bergamoTip: "Recette modifiée : Pâte feuilletée, thon (stock), sauce tomate (stock) & fromage râpé !"
+    bergamoTip: "Pâte feuilletée, thon (stock), sauce tomate (stock) & fromage râpé !"
   }
 ];
 
@@ -211,5 +210,5 @@ const CURRENT_REAL_WEEK_MENU = {
   jeudi: { midi: null, soir: "pates-sauce-maison" },
   vendredi: { midi: null, soir: "dinde-poelee-pdt-courgettes" },
   samedi: { midi: "piadina-speck-mozza", soir: "saumon-papillote-haricots-riz" },
-  dimanche: { midi: "pates-cremeuses-dinde-epinards", soir: "tarte-thon-sauce-tomate-fromage" }
+  dimanche: { midi: "pates-cremeuses-epinards-parmesan", soir: "tarte-thon-sauce-tomate-fromage" }
 };
