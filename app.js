@@ -1,11 +1,17 @@
 /**
- * Erasmus Meal & Grocery Planner - Simplified App Core Logic
- * Recipe modal displays FULL recipe ingredients. Grocery list displays ONLY items to buy.
+ * Erasmus Meal & Grocery Planner - App Core Logic (PWA Auto-Update v6.0)
  */
 
-let currentMenu = CURRENT_REAL_WEEK_MENU;
-localStorage.setItem('erasmus_menu', JSON.stringify(currentMenu));
+const APP_VERSION = 'v6.0';
 
+// Automatic cache reset on version change so iPhone Home Screen shortcuts update instantly
+if (localStorage.getItem('erasmus_app_version') !== APP_VERSION) {
+  localStorage.setItem('erasmus_menu', JSON.stringify(CURRENT_REAL_WEEK_MENU));
+  localStorage.setItem('erasmus_app_version', APP_VERSION);
+  localStorage.removeItem('erasmus_grocery_checked'); // Reset checked items for the new week
+}
+
+let currentMenu = CURRENT_REAL_WEEK_MENU;
 let checkedGroceryItems = JSON.parse(localStorage.getItem('erasmus_grocery_checked')) || {};
 let activeTab = 'calendar';
 
@@ -92,7 +98,7 @@ function renderMealSlot(recipeId, slotTitle) {
   return '';
 }
 
-// RECIPE MODAL DETAILS (Displays ALL recipe ingredients for cooking)
+// RECIPE MODAL DETAILS (APPLE SHEET)
 function openRecipeModal(recipeId) {
   const recipe = getRecipeById(recipeId);
   if (!recipe) return;
@@ -150,7 +156,7 @@ function closeRecipeModalDirect() {
   document.getElementById('recipe-modal').classList.remove('active');
 }
 
-// GROCERY LIST AGGREGATION (Filters ONLY items marked bought: true)
+// GROCERY LIST AGGREGATION
 function renderGroceryList() {
   const categoriesContainer = document.getElementById('grocery-categories-container');
   if (!categoriesContainer) return;
@@ -172,7 +178,6 @@ function renderGroceryList() {
           }
 
           recipe.ingredients.forEach(ing => {
-            // Include ONLY ingredients that need to be bought!
             if (ing.bought) {
               const key = `${ing.name.toLowerCase()}_${ing.unit}`;
               if (!aggregated[key]) {
