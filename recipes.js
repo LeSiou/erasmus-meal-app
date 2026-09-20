@@ -1,149 +1,141 @@
 /**
- * Erasmus Meal Planner - Database of Student Recipes for Bergamo
- * Recipes with ultra-detailed, professional step-by-step cooking instructions (<30 min).
+ * Erasmus Meal Planner - Database of Student Recipes for Bergamo (Semaine 2)
+ * Strictly complying with student budget, <30 min prep, no poivrons/petits pois/carottes cuites/sucré-salé.
  */
 
 const RECIPES_DB = [
   {
-    id: "pates-fraiches-epinards-ricotta",
-    name: "Pâtes fraîches épinards & ricotta au beurre de parmesan",
-    category: "Pâtes & Riz",
-    prepTime: 5,
+    id: "aubergines-boeuf-riz",
+    name: "Aubergines sautées à la viande hachée & riz",
+    category: "Viandes & Poêlées",
+    prepTime: 20,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pâtes fraîches épinards & ricotta", amount: 150, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Beurre doux ou Huile d'olive", amount: 1, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Parmesan râpé (Parmigiano Reggiano)", amount: 20, unit: "g", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Sel fin & Poivre du moulin", amount: 1, unit: "pincée", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Aubergines en dés (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Viande hachée de bœuf (congélateur)", amount: 125, unit: "g", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Riz blanc ou basmati", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Gousse d'ail, Huile d'olive, Sel & Poivre", amount: 1, unit: "dose", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Ébullition : Remplir une casserole avec 1,5L d'eau, couvrir et porter à forte ébullition à feu vif. Ajouter 1 grosse pincée de sel marin.",
-      "2. Cuisson flash : Plonger délicatement les 150g de pâtes fraîches à la ricotta & épinards dans l'eau bouillante. Baisser légèrement à feu moyen et laisser cuire 2 à 3 minutes seulement. Dès qu'elles remontent toutes à la surface, elles sont prêtes et al dente.",
-      "3. Conservation de l'eau de cuisson : Avant d'égoutter, prélever 2 cuillères à soupe de l'eau de cuisson chargée en amidon et la réserver dans une poêle.",
-      "4. Émulsion & Nappage : Égoutter les pâtes. Dans la poêle avec l'eau de cuisson chaude, ajouter 1 cuillère à soupe de beurre à feu très doux. Mélanger énergiquement pour créer une émulsion brillante et crémeuse.",
-      "5. Finition : Verser les pâtes dans la poêle, mélanger délicatement pendant 30 secondes pour bien les enrober de sauce. Servir chaud dans une assiette creuse en saupoudrant généreusement des 20g de parmesan râpé et d'un tour de moulin à poivre noir."
+      "1. Cuisson du riz : Porter 150ml d'eau salée à ébullition dans une petite casserole. Verser les 70g de riz, couvrir et cuire 10-12 min à feu doux.",
+      "2. Décongélation & Saisie : Dans une poêle avec 1 cuillère à soupe d'huile d'olive, faire dorer la viande hachée décongelée et l'ail émincé pendant 4 min.",
+      "3. Rissolage des aubergines : Ajouter les dés d'aubergines. Saler, poivrer et faire rissoler le tout 8-10 min à feu moyen jusqu'à ce que les aubergines soient bien tendres.",
+      "4. Assemblage : Déposer le riz chaud dans l'assiette et recouvrir du mélange poêlé aubergines-bœuf juteux."
     ],
-    bergamoTip: "Les pâtes fraîches farcies au rayon frais d'Esselunga ou Conad (Rana ou marque repère) sont excellentes et prêtes en 3 minutes chrono."
+    bergamoTip: "Parfait pour vider ton congélateur le lundi soir en rentrant des cours !"
   },
   {
-    id: "chili-con-carne-express",
-    name: "Chili con carne express au bœuf & riz parfumé",
+    id: "poulet-curry-courgettes-riz",
+    name: "Poêlée de poulet au curry, courgettes & riz basmati",
     category: "Viandes & Poêlées",
     prepTime: 20,
     cost: "€",
     servings: 2, // Mardi + Mercredi
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Viande hachée de bœuf (5% ou 15% MG)", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Haricots rouges en conserve", amount: 1, unit: "petite boîte (250g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Coulis de tomate nature (Passata)", amount: 1, unit: "briquette (200g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Gousse d'ail fraîche", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
-      { name: "Riz blanc (Basmati ou Thaï)", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Épices Chili / Cumin / Paprika, Huile d'olive", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Lamelles de poulet", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Courgettes fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Riz basmati", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Curry en poudre, Huile d'olive, Sel & Poivre", amount: 1, unit: "dose", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuisson du riz : Dans une petite casserole, verser 140g de riz avec 280ml d'eau froide salée (ratio 1 volume de riz pour 2 volumes d'eau). Porter à ébullition, puis réduire à feu très doux, couvrir et laisser cuire 10 à 12 minutes sans ouvrir jusqu'à absorption complète de l'eau.",
-      "2. Préparation des aromates : Éplucher et émincer très finement la gousse d'ail. Rincer les haricots rouges dans une passoire sous l'eau froide puis les égoutter.",
-      "3. Saisie de la viande : Faire chauffer 1 cuillère à soupe d'huile d'olive dans une grande poêle à feu moyen-vif. Ajouter la viande hachée (250g) et l'ail émincé. Faire dorer pendant 4 à 5 minutes en émiettant constamment la viande avec une spatule en bois.",
-      "4. Mijotage & Épices : Ajouter 1 cuillère à café d'épices chili/cumin, 1 pincée de sel et de poivre. Verser la briquette de coulis de tomate (200g) et les haricots rouges égouttés. Mélanger le tout, baisser le feu et laisser mijoter doucement pendant 10 minutes à découvert jusqu'à obtention d'une sauce riche et nappante.",
-      "5. Service & Batch Cooking : Servir immédiatement la moitié du Chili chaud sur un lit de riz blanc pour le repas du mardi soir. Placer la seconde moitié du Chili et du riz dans une boîte hermétique au réfrigérateur dès refroidissement : ton repas du mercredi soir sera prêt à être réchauffé en 2 min au micro-ondes !"
+      "1. Cuisson du riz : Cuire 140g de riz basmati dans de l'eau bouillante salée 10 minutes. Égoutter.",
+      "2. Courgettes : Couper les 2 courgettes fraîches en dés de 1 cm et les faire revenir 6-8 min à la poêle dans de l'huile d'olive.",
+      "3. Poulet & Curry : Ajouter les 250g de poulet et 1 cuillère à café de curry. Faire dorer 5 min supplémentaires.",
+      "4. Sauçage : Verser 3 cuillères d'eau pour lier le jus de cuisson. Servir la moitié avec le riz chaud le mardi soir et garder l'autre portion au frigo pour mercredi."
     ],
-    bergamoTip: "Préparé en 20 min pour 2 repas complets (mardi soir + mercredi soir). Le chili est encore meilleur le lendemain !"
+    bergamoTip: "Fait pour 2 soirs : mardi soir + mercredi soir."
   },
   {
-    id: "poulet-curry-courgettes-riz",
-    name: "Poêlée de poulet au curry, courgettes poêlées & riz basmati",
+    id: "chili-con-carne-express",
+    name: "Chili con carne express sans poivrons & riz",
     category: "Viandes & Poêlées",
     prepTime: 20,
     cost: "€",
     servings: 2, // Jeudi + Vendredi
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Lamelles de filet de poulet", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Courgettes fraîches", amount: 2, unit: "pièces (moyennes)", rayon: "Fruits & Légumes", bought: true },
-      { name: "Riz basmati", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Curry doux ou Madras en poudre", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Huile d'olive, Sel fin & Poivre", amount: 1, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Viande hachée de bœuf", amount: 250, unit: "g", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Haricots rouges en conserve", amount: 1, unit: "petite boîte", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Coulis de tomate nature", amount: 1, unit: "briquette (200g)", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Riz blanc", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Ail, Épices chili, Huile d'olive, Sel", amount: 1, unit: "dose", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuisson du riz : Lancer la cuisson des 140g de riz basmati dans une grande casserole d'eau bouillante salée pendant 10 minutes. Égoutter et réserver au chaud.",
-      "2. Découpe des courgettes : Laver soigneusement les 2 courgettes fraîches sans les éplucher. Couper les extrémités puis les détailler en dés réguliers d'environ 1 cm de côté.",
-      "3. Rissolage des courgettes : Faire chauffer 1 cuillère à soupe d'huile d'olive dans une grande poêle à feu moyen-vif. Y jeter les dés de courgettes et les faire rissoler 6 à 8 minutes en remuant régulièrement jusqu'à ce qu'ils soient tendres et légèrement dorés.",
-      "4. Cuisson du poulet au curry : Ajouter les 250g de lamelles de poulet et 1 cuillère à café de curry en poudre dans la poêle. Mélanger énergiquement pour bien enrober le poulet d'épices. Faire dorer 5 minutes supplémentaires à feu moyen.",
-      "5. Sauçage & Dressage : Verser 3 à 4 cuillères à soupe d'eau chaude dans la poêle pour décoller les sucs de cuisson et former une petite sauce curry parfumée. Rectifier l'assaisonnement en sel et poivre. Servir la moitié du poulet aux courgettes sur le riz chaud (jeudi soir) et placer l'autre moitié au frais pour le vendredi soir !"
+      "1. Riz : Lancer les 140g de riz blanc dans l'eau bouillante salée pendant 10 min.",
+      "2. Viande : Faire dorer les 250g de viande hachée avec l'ail haché dans de l'huile d'olive pendant 4-5 min.",
+      "3. Chili : Verser les haricots rouges égouttés, le coulis de tomate et les épices chili. Laisser mijoter 10 min à feu doux.",
+      "4. Service & Batch : Servir la 1ère portion le jeudi soir et conserver la 2ème au frais pour vendredi."
     ],
-    bergamoTip: "Recette idéale pour batch-cooker 2 dîners protéinés et légers."
+    bergamoTip: "Fait pour 2 soirs : jeudi soir + vendredi soir."
   },
   {
-    id: "omelette-epinards-frais",
-    name: "Omelette baveuse aux épinards frais & tranches de pain grillé",
+    id: "omelette-tomates-cerises",
+    name: "Omelette moelleuse aux tomates cerises & fromage + pain",
     category: "Express & Salés",
     prepTime: 10,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Œufs frais bio ou plein air", amount: 2, unit: "gros œufs", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Épinards frais en pousses", amount: 50, unit: "g", rayon: "Fruits & Légumes", bought: false },
-      { name: "Pain frais ou pain de mie complet", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Beurre ou Huile d'olive, Sel & Poivre", amount: 1, unit: "pincée", rayon: "Crémerie & Fromages", bought: false }
+      { name: "Tomates cerises", amount: 1, unit: "barquette", rayon: "Fruits & Légumes", bought: true },
+      { name: "Pain ou paquet de pain de mie", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Œufs frais (stock)", amount: 2, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Fromage râpé ou Emmental (stock)", amount: 30, unit: "g", rayon: "Crémerie & Fromages", bought: false }
     ],
     steps: [
-      "1. Tombée d'épinards : Rincer les pousses d'épinards sous l'eau froide et les sécher. Dans une poêle antiadhésive, faire fondre une noisette de beurre à feu moyen. Y jeter les épinards et les faire 'tomber' (réduire) pendant 1 minute seulement jusqu'à ce qu'ils flétrissent.",
-      "2. Appareil à œufs : Pendant ce temps, casser les 2 œufs frais dans un bol, ajouter 1 cuillère à soupe d'eau froide (secret pour une omelette très moelleuse), une pincée de sel et du poivre noir moulu. Battre vigoureusement à la fourchette pendant 30 secondes.",
-      "3. Cuisson de l'omelette : Verser les œufs battus directement sur les épinards réduits dans la poêle. Baisser à feu doux-moyen. Avec une spatule, ramener délicatement les bords cuits vers le centre en inclinant la poêle pour faire couler l'œuf liquide au fond.",
-      "4. Pliage : Laisser cuire 2 à 3 minutes selon ton goût (baveuse au centre ou bien cuite). Rabattre une moitié de l'omelette sur l'autre pour former une demi-lune.",
-      "5. Service : Faire toaster les 2 tranches de pain au grille-pain ou à la poêle. Glisser l'omelette aux épinards sur une assiette chaude et déguster immédiatement avec le pain croustillant !"
+      "1. Préparation : Laver et couper 5-6 tomates cerises en deux.",
+      "2. Appareil : Battre 2 œufs dans un bol avec du sel, du poivre et 1 cuillère d'eau.",
+      "3. Cuisson : Faire fondre une noisette de beurre à la poêle, verser les œufs. Quand ils commencent à prendre, ajouter le fromage râpé et les demi-tomates cerises.",
+      "4. Pliage : Rabattre en demi-lune et servir immédiatement avec 2 tranches de pain grillé."
     ],
-    bergamoTip: "Le repas de midi ultra rapide du samedi après les cours, prêt en 10 min chrono."
+    bergamoTip: "Repas express du samedi midi prêt en 10 minutes."
   },
   {
-    id: "pates-aubergine-pancetta",
-    name: "Pâtes sautées à l'aubergine rôtie & pancetta grillée (Air Fryer)",
-    category: "Pâtes & Riz",
-    prepTime: 25,
-    cost: "€",
+    id: "saumon-papillote-haricots",
+    name: "Saumon en papillote au citron & haricots verts",
+    category: "Poisson & Poêlées",
+    prepTime: 20,
+    cost: "€€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pâtes sèches (Penne Rigate ou Rigatoni)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Aubergine fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
-      { name: "Pancetta italienne en dés", amount: 100, unit: "g", rayon: "Charcuterie & Traiteur", bought: false },
-      { name: "Huile d'olive extra vierge, Sel & Poivre", amount: 1, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Pavé de saumon (congélateur)", amount: 1, unit: "pavé (150g)", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Haricots verts (frais ou surgelés)", amount: 1, unit: "portion (150g)", rayon: "Fruits & Légumes", bought: true },
+      { name: "Citron jaune ou jus de citron", amount: 1, unit: "filet", rayon: "Fruits & Légumes", bought: false },
+      { name: "Riz ou Pommes de terre (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Préparation de l'aubergine : Laver l'aubergine sans la peler. La couper en dés réguliers d'environ 1,5 cm. Dans un cul de poule, mélanger les dés d'aubergine avec 1 cuillère à soupe d'huile d'olive, du sel et du poivre.",
-      "2. Rôtissage Air Fryer : Préchauffer l'Air Fryer à 190°C. Déposer les dés d'aubergine dans le panier et faire rôtir pendant 15 minutes en secouant le panier à mi-cuisson (à la minute 7) jusqu'à ce que l'aubergine soit très tendre et bien dorée.",
-      "3. Cuisson des pâtes : Pendant la cuisson de l'aubergine, porter à ébullition 1L d'eau salée dans une casserole. Cuire les 100g de Penne ou Rigatoni al dente selon le temps indiqué sur le paquet (généralement 10 min).",
-      "4. Pancetta croustillante : Dans une poêle sans matière grasse à feu moyen, faire suer et griller les 100g de dés de pancetta pendant 3 à 4 minutes jusqu'à ce qu'ils soient bien dorés et croustillants.",
-      "5. Assemblage & Dégustation : Égoutter les pâtes en gardant un petit fond d'eau de cuisson. Les verser directement dans la poêle avec la pancetta grillée, ajouter les dés d'aubergine rôties et mélanger à feu vif pendant 1 minute. Servir immédiatement bien chaud !"
+      "1. Haricots : Faire cuire les haricots verts dans l'eau bouillante salée pendant 8-10 min. Égoutter.",
+      "2. Papillote : Sur une feuille de papier cuisson, déposer le pavé de saumon décongelé. Arroser d'un filet d'huile d'olive, de jus de citron, sel et poivre. Refermer bien la papillote.",
+      "3. Cuisson saumon : Cuire 12-15 min au four à 180°C (ou 10 min à la poêle à couvert avec un fond d'eau).",
+      "4. Service : Servir le saumon fondant avec les haricots verts et le riz du stock."
     ],
-    bergamoTip: "L'Air Fryer permet d'avoir une aubergine ultra-fondante sans absorber trop d'huile !"
+    bergamoTip: "Le saumon en papillote est ultra moelleux et sans odeur de cuisson !"
   },
   {
-    id: "salade-thon-oeufs-durs",
-    name: "Salade de thon estivale aux œufs durs & vinaigrette olive",
+    id: "bagel-avocat-thon",
+    name: "Toast Avocat, Thon au naturel & jus de citron",
     category: "Express & Salés",
     prepTime: 10,
     cost: "€",
     servings: 1,
-    tags: ["Protéine", "Légume"],
+    tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Thon au naturel en conserve", amount: 1, unit: "boîte (80g)", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Œufs frais", amount: 2, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Salade verte fraîche mélangée", amount: 1, unit: "grosse poignée", rayon: "Fruits & Légumes", bought: false },
-      { name: "Huile d'olive, Vinaigre, Sel & Poivre", amount: 1, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Avocat mûr", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (80g)", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Pain de mie ou Bagel (acheté)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Citron, Sel & Poivre", amount: 1, unit: "dose", rayon: "Fruits & Légumes", bought: false }
     ],
     steps: [
-      "1. Cuisson des œufs durs : Porter une petite casserole d'eau à ébullition. Y plonger délicatement 2 œufs frais avec une cuillère et laisser cuire à petits bouillons pendant 9 minutes exactement.",
-      "2. Choc thermique & Écaillage : Dès la fin des 9 minutes, sortir les œufs et les plonger immédiatement dans un bol rempli d'eau froide avec quelques glaçons pendant 2 minutes. Tapoter les œufs sur le plan de travail et retirer la coquille facilement sous un filet d'eau.",
-      "3. Préparation du thon & salade : Égoutter la boîte de thon au naturel. Rincer et sécher une belle poignée de salade verte.",
-      "4. Vinaigrette express : Dans le fond du saladier, mélanger 1 cuillère à soupe d'huile d'olive, 1 cuillère à café de vinaigre, du sel et du poivre noir.",
-      "5. Dressage : Ajouter la salade fraîche dans le saladier et mélanger. Émietter le thon au naturel par-dessus, puis couper les 2 œufs durs en 4 quartiers et les disposer harmonieusement sur la salade. Déguster immédiatement !"
+      "1. Toast : Faire griller 2 tranches de pain au grille-pain.",
+      "2. Écrasé d'avocat : Écraser la moitié de l'avocat à la fourchette avec un filet de jus de citron, sel et poivre.",
+      "3. Mélange : Ajouter le thon égoutté du stock et mélanger légèrement.",
+      "4. Tartinade : Étaler généreusement la préparation au thon et avocat sur le pain chaud grillé."
     ],
-    bergamoTip: "Un repas complet, ultra frais et riche en protéines pour le dimanche midi."
+    bergamoTip: "Repas du dimanche midi ultra frais et protéiné."
   },
   {
     id: "focaccia-pizza-mozza",
@@ -154,19 +146,17 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Focaccia nature artisanale", amount: 1, unit: "part", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Grosse tomate fraîche mûre", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
-      { name: "Boule de mozzarella fraîche (125g)", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Origan séché & Huile d'olive", amount: 1, unit: "pincée", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Grosse tomate fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Boule de mozzarella fraîche", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Focaccia nature", amount: 1, unit: "pièce", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Origan & Huile d'olive (stock)", amount: 1, unit: "pincée", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Découpe de la focaccia : Prendre la focaccia nature et la trancher en deux dans le sens de la longueur avec un couteau à pain pour créer deux grands demi-pains.",
-      "2. Préparation du garnissage : Laver la grosse tomate fraîche et la trancher en rondelles régulières de 5 mm. Égoutter la boule de mozzarella et la couper en tranches d'épaisseur égale.",
-      "3. Montage pizza : Disposer les rondelles de tomate fraîche sur les bases de focaccia. Recouvrir uniformément avec les tranches de mozzarella fraîche.",
-      "4. Assaisonnement : Saupoudrer généreusement d'origan séché et verser un léger filet d'huile d'olive sur le fromage.",
-      "5. Gratinage Air Fryer : Préchauffer l'Air Fryer à 180°C. Y déposer les demi-focaccias garnies et cuire pendant 6 à 8 minutes jusqu'à ce que la mozzarella soit complètement fondue, dorée et gratinait avec des petites bulles. Servir chaud et croustillant !"
+      "1. Découpe : Ouvrir la focaccia nature achetée en deux.",
+      "2. Garniture : Trancher la grosse tomate et la mozzarella en rondelles régulières.",
+      "3. Gratinage : Disposer tomates et mozza sur le pain, saupoudrer d'origan. Passer à l'Air Fryer 6-8 min à 180°C jusqu'à ce que le fromage soit gratiné et coulant."
     ],
-    bergamoTip: "Le repas réconfortant ultime du dimanche soir préparé en 10 minutes !"
+    bergamoTip: "Le repas chaud réconfortant du dimanche soir !"
   }
 ];
 
@@ -175,11 +165,11 @@ function getRecipeById(id) {
 }
 
 const CURRENT_REAL_WEEK_MENU = {
-  lundi: { midi: null, soir: "pates-fraiches-epinards-ricotta" },
-  mardi: { midi: null, soir: "chili-con-carne-express" },
-  mercredi: { midi: null, soir: "chili-con-carne-express" },
-  jeudi: { midi: null, soir: "poulet-curry-courgettes-riz" },
-  vendredi: { midi: null, soir: "poulet-curry-courgettes-riz" },
-  samedi: { midi: "omelette-epinards-frais", soir: "pates-aubergine-pancetta" },
-  dimanche: { midi: "salade-thon-oeufs-durs", soir: "focaccia-pizza-mozza" }
+  lundi: { midi: null, soir: "aubergines-boeuf-riz" },
+  mardi: { midi: null, soir: "poulet-curry-courgettes-riz" },
+  mercredi: { midi: null, soir: "poulet-curry-courgettes-riz" },
+  jeudi: { midi: null, soir: "chili-con-carne-express" },
+  vendredi: { midi: null, soir: "chili-con-carne-express" },
+  samedi: { midi: "omelette-tomates-cerises", soir: "saumon-papillote-haricots" },
+  dimanche: { midi: "bagel-avocat-thon", soir: "focaccia-pizza-mozza" }
 };
