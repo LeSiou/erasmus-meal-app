@@ -1,6 +1,12 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (No-Cache Force Reset v9.0)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v10.0 Force Cache Purge)
  */
+
+function forceAppRefresh() {
+  localStorage.clear();
+  sessionStorage.clear();
+  window.location.reload(true);
+}
 
 // Force purge old cache & local storage to guarantee fresh week menu display
 localStorage.clear();
