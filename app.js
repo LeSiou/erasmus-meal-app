@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v13.0 Clean Grouped Grocery List)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v14.0 Integer Rounding & 4 Speck Tranches)
  */
 
 function forceAppRefresh() {
@@ -224,6 +224,14 @@ function renderGroceryList() {
       const isChecked = checkedGroceryItems[itemId] || false;
       if (isChecked) checkedCount++;
 
+      let displayAmount = ing.amount;
+      if (typeof ing.amount === 'number') {
+        const rounded = Math.round(ing.amount);
+        if (Math.abs(ing.amount - rounded) < 0.05) {
+          displayAmount = rounded;
+        }
+      }
+
       itemsHTML += `
         <div class="ingredient-item ${isChecked ? 'checked' : ''}" onclick="toggleGroceryCheck('${itemId}')">
           <div style="display: flex; align-items: center;">
@@ -232,7 +240,7 @@ function renderGroceryList() {
               <span class="ing-name">${ing.name}</span>
             </div>
           </div>
-          <span class="ing-qty">${ing.amount} ${ing.unit}</span>
+          <span class="ing-qty">${displayAmount} ${ing.unit}</span>
         </div>
       `;
     });

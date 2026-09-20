@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Validated Week 2 Menu (Bergamo)
- * Consolidated Shopping Quantities & Clean Deduplication
+ * Exact Speck Portions (4 tranches), Sauce Tomate in stock, Clean 1 Sachet Salad
  */
 
 const RECIPES_DB = [
@@ -35,7 +35,7 @@ const RECIPES_DB = [
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
       { name: "Dés de dinde ou poulet", amount: 120, unit: "g", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Œufs frais", amount: 1, unit: "boîte (6 pièces)", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Œufs frais", amount: 1, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true },
       { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
       { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
@@ -57,18 +57,18 @@ const RECIPES_DB = [
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
       { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Speck italien", amount: 4, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
+      { name: "Speck italien", amount: 2, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
       { name: "Tomates fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
       { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
       { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Couper 2 tomates en tranches.",
-      "2. Disposer 1/3 du sachet de salade verte, les tomates et 4 tranches de Speck dans une assiette.",
+      "2. Disposer 1/3 du sachet de salade verte, les tomates et 2 tranches de Speck dans une assiette.",
       "3. Déposer 1 boule de Mozzarella au centre, arroser d'huile d'olive, sel et poivre.",
       "4. Servir avec 2 tranches de pain grillé du stock."
     ],
-    bergamoTip: "Utilise 1 des 2 boules de mozza et 4 tranches de speck du paquet !"
+    bergamoTip: "Utilise 1 des 2 boules de mozza et 2 tranches de speck sur les 4 du paquet !"
   },
   {
     id: "pates-sauce-maison",
@@ -121,7 +121,7 @@ const RECIPES_DB = [
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
       { name: "Piadine romagnole", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Speck italien", amount: 4, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
+      { name: "Speck italien", amount: 2, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
       { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
       { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
       { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
@@ -129,7 +129,7 @@ const RECIPES_DB = [
     steps: [
       "1. Trancher la 2ème boule de Mozzarella et 1 tomate.",
       "2. Chauffer 1 piadina du paquet dans une poêle à sec pendant 1 minute.",
-      "3. Garnir avec les 4 tranches de Speck restantes, la mozzarella, les tranches de tomate et le 1/3 de salade restant.",
+      "3. Garnir avec les 2 tranches de Speck restantes, la mozzarella, les tranches de tomate et le 1/3 de salade restant.",
       "4. Plier en deux et chauffer 1 min."
     ],
     bergamoTip: "Permet de finir le paquet de speck, la 2ème mozza et le sachet de salade !"
@@ -186,17 +186,17 @@ const RECIPES_DB = [
     tags: ["Protéine", "Féculent"],
     ingredients: [
       { name: "Pâte feuilletée", amount: 1, unit: "rouleau", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Sauce tomate", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Sauce tomate (stock)", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: false },
       { name: "Fromage râpé (Mozzarella / Emmental)", amount: 1, unit: "sachet", rayon: "Crémerie & Fromages", bought: true },
       { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Étaler la pâte feuilletée dans un plat à tarte.",
-      "2. Étaler le bocal de sauce tomate et émietter la boîte de thon du stock.",
+      "2. Étaler ta sauce tomate du stock et émietter la boîte de thon du stock.",
       "3. Recouvrir généreusement du sachet de fromage râpé.",
-      "4. Enfourner 20 min à 190°C jusqu'à ce que le fromage soit bien gratine et servir chaud."
+      "4. Enfourner 20 min à 190°C jusqu'à ce que le fromage soit bien gratiné et servir chaud."
     ],
-    bergamoTip: "Recette modifiée selon tes consignes : Pâte feuilletée, thon, sauce tomate & fromage râpé !"
+    bergamoTip: "Recette modifiée : Pâte feuilletée, thon (stock), sauce tomate (stock) & fromage râpé !"
   }
 ];
 
