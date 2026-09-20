@@ -1,6 +1,6 @@
 /**
- * Erasmus Meal Planner - Database of Student Recipes for Bergamo (Semaine 2 - Spécial Recettes de Maman)
- * Varied family recipes extracted from mom's MENUS.numbers file.
+ * Erasmus Meal Planner - Database of Student Recipes for Bergamo (Semaine 2)
+ * Replaced shrimp recipe with Pasta Primavera Pesto & Burrata (easy Carrefour Express ingredients).
  */
 
 const RECIPES_DB = [
@@ -26,26 +26,26 @@ const RECIPES_DB = [
     bergamoTip: "Repas du lundi soir idéal pour vider ton congélateur !"
   },
   {
-    id: "tagliatelles-crevettes-epinards",
-    name: "Tagliatelles aux crevettes, pousses d'épinards & crème",
+    id: "pasta-courgettes-pesto-burrata",
+    name: "Pâtes Primavera courgettes poêlées, Pesto & Burrata",
     category: "Pâtes & Riz",
     prepTime: 18,
-    cost: "€€",
+    cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Tagliatelles", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Crevettes décortiquées", amount: 100, unit: "g", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Pousses d'épinards fraîches", amount: 60, unit: "g", rayon: "Fruits & Légumes", bought: true },
-      { name: "Crème liquide ou Panna da cucina", amount: 50, unit: "ml", rayon: "Crémerie & Fromages", bought: true }
+      { name: "Pâtes (Penne / Farfalle)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Courgette fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Pesto alla Genovese", amount: 2, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Burrata fraîche (ou Mozzarella)", amount: 1, unit: "pièce", rayon: "Crémerie & Fromages", bought: true }
     ],
     steps: [
-      "1. Pâtes : Cuire 100g de tagliatelles al dente dans l'eau bouillante salée.",
-      "2. Crevettes : Dans une poêle, faire dorer 100g de crevettes 3 min avec de l'huile d'olive et de l'ail.",
-      "3. Épinards & Crème : Ajouter 60g de pousses d'épinards fraîches (elles réduisent en 2 min). Verser 50ml de crème liquide et un trait de citron.",
-      "4. Assemblage : Mélanger les tagliatelles égouttées dans la sauce aux crevettes et épinards."
+      "1. Pâtes : Cuire 100g de pâtes al dente dans l'eau bouillante salée.",
+      "2. Courgettes : Faire dorer 1 courgette en demi-rondelles 7-8 min à la poêle avec un filet d'huile d'olive et de l'ail.",
+      "3. Assemblage : Égoutter les pâtes en gardant un peu d'eau de cuisson. Mélanger les pâtes, les courgettes et 2 C. à soupe de pesto dans la poêle.",
+      "4. Finition : Servir chaud et déposer la Burrata fraîche entière sur le dessus en l'ouvrant délicatement."
     ],
-    bergamoTip: "Recette gourmande tirée du fichier de maman, prête en 18 min !"
+    bergamoTip: "Ingrédients simples trouvables dans n'importe quel Carrefour Express en Italie ! Tiré du fichier de maman."
   },
   {
     id: "piadina-scamorza-jambon",
@@ -99,6 +99,7 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
+      { name: "Pousses d'épinards fraîches", amount: 60, unit: "g", rayon: "Fruits & Légumes", bought: true },
       { name: "Jambon blanc ou Prosciutto Cotto", amount: 2, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
       { name: "Fromage frais Robiola ou Philadelphia", amount: 50, unit: "g", rayon: "Crémerie & Fromages", bought: true }
     ],
@@ -177,7 +178,7 @@ function getRecipeById(id) {
 
 const CURRENT_REAL_WEEK_MENU = {
   lundi: { midi: null, soir: "aubergines-boeuf-riz" },
-  mardi: { midi: null, soir: "tagliatelles-crevettes-epinards" },
+  mardi: { midi: null, soir: "pasta-courgettes-pesto-burrata" },
   mercredi: { midi: null, soir: "piadina-scamorza-jambon" },
   jeudi: { midi: null, soir: "cake-olives-pancetta" },
   vendredi: { midi: null, soir: "cake-olives-pancetta" },
