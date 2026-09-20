@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v12.0 Force Cache Purge)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v13.0 Clean Grouped Grocery List)
  */
 
 function forceAppRefresh() {
