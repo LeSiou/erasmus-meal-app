@@ -1,18 +1,12 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (PWA Auto-Update v6.0)
+ * Erasmus Meal & Grocery Planner - App Core Logic (No-Cache Force Reset v9.0)
  */
 
-const APP_VERSION = 'v6.0';
-
-// Automatic cache reset on version change so iPhone Home Screen shortcuts update instantly
-if (localStorage.getItem('erasmus_app_version') !== APP_VERSION) {
-  localStorage.setItem('erasmus_menu', JSON.stringify(CURRENT_REAL_WEEK_MENU));
-  localStorage.setItem('erasmus_app_version', APP_VERSION);
-  localStorage.removeItem('erasmus_grocery_checked'); // Reset checked items for the new week
-}
+// Force purge old cache & local storage to guarantee fresh week menu display
+localStorage.clear();
 
 let currentMenu = CURRENT_REAL_WEEK_MENU;
-let checkedGroceryItems = JSON.parse(localStorage.getItem('erasmus_grocery_checked')) || {};
+let checkedGroceryItems = {};
 let activeTab = 'calendar';
 
 const DAYS_TRANSLATIONS = {
