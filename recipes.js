@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Database of Student Recipes for Bergamo
- * Complete recipe ingredients for cooking + bought flags for shopping list.
+ * Recipes with complete step-by-step cooking instructions (<30 min).
  */
 
 const RECIPES_DB = [
@@ -18,9 +18,11 @@ const RECIPES_DB = [
       { name: "Parmesan râpé", amount: 20, unit: "g", rayon: "Crémerie & Fromages", bought: false }
     ],
     steps: [
-      "Plonger les pâtes fraîches du stock dans l'eau bouillante salée 2 à 3 minutes.",
-      "Égoutter en conservant un peu d'eau de cuisson.",
-      "Mélanger avec une noisette de beurre ou un filet d'huile d'olive et saupoudrer de parmesan."
+      "Porter une casserole d'eau salée à ébullition (1L d'eau pour 100g de pâtes).",
+      "Plonger les pâtes fraîches à la ricotta & épinards et cuire 2 à 3 minutes seulement (elles remontent à la surface).",
+      "Égoutter délicatement en conservant 2 cuillères à soupe d'eau de cuisson.",
+      "Dans une poêle à feu doux, faire fondre une noisette de beurre avec l'eau de cuisson conservée pour créer une liaison onctueuse.",
+      "Ajouter les pâtes, mélanger doucement et servir chaud saupoudré généreusement de parmesan râpé."
     ],
     bergamoTip: "Les pâtes fraîches farcies au rayon frais d'Esselunga ou Conad sont excellentes et prêtes en 3 min."
   },
@@ -40,10 +42,11 @@ const RECIPES_DB = [
       { name: "Riz blanc", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "Faire cuire le riz du stock dans de l'eau bouillante salée.",
-      "Dans une poêle, faire revenir la moitié de la viande hachée (stock) avec l'ail du stock.",
-      "Ajouter les haricots rouges du stock et le coulis de tomate du stock.",
-      "Servir la moitié avec le riz. Réchauffer l'autre moitié mercredi soir !"
+      "Lancer la cuisson du riz (1 volume de riz pour 2 volumes d'eau salée) pendant 10-12 min à couvert.",
+      "Émincer la gousse d'ail. Faire chauffer une poêle avec un filet d'huile d'olive à feu moyen.",
+      "Ajouter les 250g de viande hachée et l'ail haché. Faire dorer 4-5 min en émiettant la viande avec une spatule.",
+      "Rincer et égoutter les haricots rouges. Les verser dans la poêle avec la briquette de coulis de tomate, sel, poivre et épices (chili/paprika).",
+      "Laisser mijoter à feu doux 10 min jusqu'à épaississement. Servir la 1ère portion avec le riz, et placer la 2ème portion au frigo pour mercredi soir."
     ],
     bergamoTip: "Fait pour 2 soirs : mardi soir et mercredi soir."
   },
@@ -62,10 +65,11 @@ const RECIPES_DB = [
       { name: "Curry en poudre", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "Faire cuire le riz du stock dans de l'eau bouillante salée.",
-      "Couper les 2 courgettes achetées en dés et les faire dorer à la poêle.",
-      "Ajouter les lamelles de poulet du stock et le curry du stock.",
-      "Servir la moitié le jeudi soir et réchauffer l'autre moitié vendredi soir."
+      "Lancer la cuisson du riz basmati dans l'eau bouillante salée pendant 10 minutes.",
+      "Laver les 2 courgettes fraîches et les couper en dés réguliers de 1 cm.",
+      "Dans une poêle, faire dorer les dés de courgettes avec une cuillère d'huile d'olive pendant 6-8 minutes à feu moyen-vif.",
+      "Ajouter les 250g de lamelles de poulet et 1 cuillère à café de curry en poudre. Faire dorer 5 minutes supplémentaires.",
+      "Verser 3 cuillères à soupe d'eau pour décoller les sucs et former une sauce parfumée. Servir la moitié avec le riz chaud et réserver l'autre moitié au frais pour vendredi."
     ],
     bergamoTip: "Fait pour 2 soirs : jeudi soir et vendredi soir."
   },
@@ -83,9 +87,11 @@ const RECIPES_DB = [
       { name: "Pain ou paquet de pain de mie", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true }
     ],
     steps: [
-      "Faire réduire les épinards du stock 1 min dans la poêle chaude.",
-      "Verser 2 œufs du stock battus par-dessus et cuire à feu moyen.",
-      "Servir avec le pain fraîchement acheté."
+      "Rincer et sécher la poignée d'épinards frais.",
+      "Faire fondre une noisette de beurre dans une poêle. Faire tomber les épinards 1 minute jusqu'à ce qu'ils réduisent.",
+      "Dans un bol, battre les 2 œufs avec du sel et du poivre à la fourchette.",
+      "Verser les œufs battus directement sur les épinards dans la poêle. Cuire 2-3 min à feu moyen jusqu'à consistance baveuse ou bien cuite.",
+      "Servir chaud immédiatement avec les tranches de pain frais ou grillé."
     ],
     bergamoTip: "Repas minute idéal du samedi midi."
   },
@@ -103,9 +109,11 @@ const RECIPES_DB = [
       { name: "Pancetta en dés", amount: 100, unit: "g", rayon: "Charcuterie & Traiteur", bought: false }
     ],
     steps: [
-      "Couper l'aubergine achetée en dés et la rôtir à l'Air Fryer (15 min à 190°C).",
-      "Faire cuire les pâtes du stock.",
-      "Griller la pancetta du stock et mélanger le tout."
+      "Laver l'aubergine et la couper en petits cubes de 1,5 cm. Les mélanger avec un filet d'huile d'olive, sel et poivre.",
+      "Préchauffer l'Air Fryer à 190°C. Faire rôtir les dés d'aubergine pendant 15 minutes en secouant le panier à mi-cuisson.",
+      "Pendant ce temps, faire cuire les 100g de pâtes al dente dans l'eau bouillante salée.",
+      "Dans une poêle à sec, faire griller les 100g de pancetta en dés pendant 3-4 minutes jusqu'à ce qu'ils soient croustillants.",
+      "Égoutter les pâtes, ajouter les dés d'aubergine fondants et la pancetta grillée. Mélanger le tout et servir chaud."
     ],
     bergamoTip: "Repas croustillant du samedi soir."
   },
@@ -123,8 +131,11 @@ const RECIPES_DB = [
       { name: "Salade fraîche", amount: 1, unit: "poignée", rayon: "Fruits & Légumes", bought: false }
     ],
     steps: [
-      "Cuire 2 œufs du stock pendant 10 min pour faire des œufs durs.",
-      "Mélanger la salade du stock avec le thon du stock et les œufs durs en quartiers."
+      "Porter une petite casserole d'eau à ébullition. Y plonger les 2 œufs et cuire 9 minutes exactement.",
+      "Plonger les œufs dans un bol d'eau froide pour stopper la cuisson, puis les écailler et les couper en 4 quartiers.",
+      "Égoutter la boîte de thon au naturel.",
+      "Dans une grande assiette, disposer la salade fraîche, le thon émietté et les quartiers d'œufs durs.",
+      "Assaisonner d'une cuillère d'huile d'olive, un trait de vinaigre, du sel et du poivre."
     ],
     bergamoTip: "Repas frais du dimanche midi."
   },
@@ -142,9 +153,11 @@ const RECIPES_DB = [
       { name: "Boule de mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true }
     ],
     steps: [
-      "Ouvrir la focaccia du stock.",
-      "Garnir de rondelles de la tomate achetée et de la mozzarella achetée.",
-      "Saupoudrer d'origan du stock et passer à l'Air Fryer 8 min."
+      "Ouvrir la focaccia nature en deux dans le sens de la longueur.",
+      "Trancher la tomate fraîche et la boule de mozzarella en rondelles régulières.",
+      "Garnir la focaccia avec les rondelles de tomate et de mozzarella.",
+      "Saupoudrer d'origan séché et ajouter un filet d'huile d'olive.",
+      "Placer dans l'Air Fryer et cuire à 180°C pendant 6 à 8 minutes jusqu'à ce que le fromage soit gratiné et coulant."
     ],
     bergamoTip: "Repas chaud réconfortant du dimanche soir."
   }
