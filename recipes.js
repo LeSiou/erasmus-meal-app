@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Validated Week 3 Menu (Bergamo)
- * Exact Tuesday & Wednesday Dishes Restored as Validated by Alessio
+ * Salad Completely Removed from Shopping List & Meals!
  */
 
 const RECIPES_DB = [
@@ -36,13 +36,12 @@ const RECIPES_DB = [
     ingredients: [
       { name: "Focaccia ou pain frais", amount: 1, unit: "pièce", rayon: "Boulangerie & Épicerie", bought: true },
       { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
-      { name: "Salade verte", amount: 0.5, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
+      { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
       "1. Trancher la boule de Mozzarella et 1 tomate fraîche.",
       "2. Ouvrir la Focaccia et la faire tiédir 1 minute à la poêle.",
-      "3. Garnir avec la Mozzarella, la tomate et de la salade verte.",
+      "3. Garnir avec la Mozzarella et les rondelles de tomate.",
       "4. Déguster immédiatement !"
     ],
     bergamoTip: "Consomme la Mozzarella fraîche dès le mardi !"
@@ -64,9 +63,9 @@ const RECIPES_DB = [
       "1. Couper 2 tomates fraîches en petits dés.",
       "2. Griller 2 tranches de pain au gril ou à la poêle.",
       "3. Garnir le pain des dés de tomates, origan du stock, huile d'olive, sel et poivre.",
-      "4. Servir immédiatement (juste du pain, des tomates et de l'origan !)."
+      "4. Servir immédiatement !"
     ],
-    bergamoTip: "Exactement comme demandé : pain, tomates, origan & huile d'olive."
+    bergamoTip: "Pain, tomates, origan & huile d'olive."
   },
   {
     id: "gratin-chou-fleur-pdt-dinde",
@@ -79,16 +78,15 @@ const RECIPES_DB = [
     ingredients: [
       { name: "Dés de dinde ou poulet", amount: 1, unit: "barquette (150g)", rayon: "Boucherie & Poisson", bought: true },
       { name: "Chou-fleur (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true },
-      { name: "Salade verte", amount: 0.5, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
+      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
       "1. Cuire les pommes de terre en dés et le chou-fleur du congel 10 min.",
       "2. Faire dorer ta barquette de dés de dinde 5 min à la poêle.",
       "3. Mélanger le tout avec un filet d'huile d'olive, saler et poivrer.",
-      "4. Servir chaud avec le reste de salade verte (le sachet est fini le jeudi !)."
+      "4. Servir chaud."
     ],
-    bergamoTip: "Utilise le chou-fleur de ton congel et termine le sachet de salade le jeudi !"
+    bergamoTip: "Utilise le chou-fleur de ton congel !"
   },
   {
     id: "poelee-pdt-courgettes-oeufs",
@@ -189,9 +187,9 @@ const RECIPES_DB = [
     steps: [
       "1. Monter le croque-monsieur avec 2 tranches de pain, le jambon et le fromage.",
       "2. Faire dorer à la poêle 3 min de chaque côté avec une noisette de beurre jusqu'à ce que le fromage fonde.",
-      "3. Servir bien chaud."
+      "3. Servir bien chaud (sans salade, rapide en 5 min !)."
     ],
-    bergamoTip: "Repas express 5 min sans four pour le dimanche soir !"
+    bergamoTip: "Repas express 5 min sans four ni salade pour le dimanche soir !"
   }
 ];
 

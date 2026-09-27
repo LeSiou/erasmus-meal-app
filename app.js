@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v19.0 Exact Validated Dishes)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v20.0 Salad Completely Removed)
  */
 
 function forceAppRefresh() {
