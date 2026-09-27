@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v18.0 Salad Consumed Tue-Wed-Thu)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v19.0 Exact Validated Dishes)
  */
 
 function forceAppRefresh() {
