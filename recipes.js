@@ -1,204 +1,198 @@
 /**
- * Erasmus Meal Planner - Validated Week 2 Menu (Bergamo)
- * Volaille réorganisée selon la réalité d'Alessio :
- * 1. Dés de dinde (100g) pour Mardi
- * 2. Paquet d'escalopes (2x100g ou 1x200g) pour Vendredi soir & Dimanche midi
+ * Erasmus Meal Planner - Validated Week 3 Menu (Bergamo)
+ * 100% Validated by Alessio (v17.0)
  */
 
 const RECIPES_DB = [
   {
-    id: "aubergines-boeuf-riz",
-    name: "Poêlée d'aubergines au bœuf haché & riz",
-    category: "Poêlées & Riz",
-    prepTime: 20,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Aubergines en dés (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Viande hachée de bœuf (congélateur)", amount: 125, unit: "g", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Cuire 70g de riz basmati dans l'eau bouillante salée pendant 10 minutes.",
-      "2. Faire dorer la viande hachée dans 1 C. à soupe d'huile d'olive pendant 4 min.",
-      "3. Ajouter les dés d'aubergines du congel, saler, poivrer et rissoler 8-10 min.",
-      "4. Servir le riz chaud nappé de la poêlée aubergines-bœuf."
-    ],
-    bergamoTip: "Repas du lundi 100% stock & congélateur."
-  },
-  {
-    id: "riz-cantonais-dinde",
-    name: "Riz cantonais rapide à la dinde",
-    category: "Riz & Poêlées",
+    id: "poulet-pates-epinards",
+    name: "Poulet, pâtes & épinards",
+    category: "Pâtes & Volaille",
     prepTime: 15,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Dés de dinde ou poulet", amount: 1, unit: "petite barquette (100g)", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Œufs frais", amount: 1, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
-      { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Dés de dinde ou poulet (stock)", amount: 120, unit: "g", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Épinards (congélateur)", amount: 80, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Pâtes (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuire 70g de riz basmati al dente et le laisser tiédir.",
-      "2. Faire dorer ta barquette de dés de dinde (100g) 5 min à la poêle.",
-      "3. Casser 1 œuf de ta boîte directement dans la poêle et mélanger vivement.",
-      "4. Incorporer le riz et servir avec 1/3 du sachet de salade verte."
+      "1. Cuire 80g de pâtes du stock dans l'eau bouillante salée.",
+      "2. Réchauffer tes dés de poulet et les épinards du congel 4 min à la poêle avec un filet d'huile d'olive.",
+      "3. Mélanger le tout aux pâtes égouttées.",
+      "4. Servir bien chaud !"
     ],
-    bergamoTip: "Utilise ta barquette de dés de dinde prêt-à-cuire !"
+    bergamoTip: "Repas reporté de la semaine dernière (100% stock) !"
   },
   {
-    id: "salade-italienne-mozza-speck",
-    name: "Salade italienne Mozzarella, Speck & Tomates",
-    category: "Salades & Fraîcheur",
-    prepTime: 10,
+    id: "focaccia-mozza-tomates",
+    name: "Focaccia italienne Mozzarella & Tomates",
+    category: "Express & Salés",
+    prepTime: 8,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
+      { name: "Focaccia ou pain frais", amount: 1, unit: "pièce", rayon: "Boulangerie & Épicerie", bought: true },
       { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Speck italien", amount: 2, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
-      { name: "Tomates fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
-      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
-      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
-      "1. Couper 2 tomates en tranches.",
-      "2. Disposer 1/3 du sachet de salade verte, les tomates et 2 tranches de Speck dans une assiette.",
-      "3. Déposer 1 boule de Mozzarella au centre, arroser d'huile d'olive, sel et poivre.",
-      "4. Servir avec 2 tranches de pain grillé du stock."
+      "1. Trancher la boule de Mozzarella et 1 tomate fraîche.",
+      "2. Ouvrir la Focaccia et la faire tiédir 1 minute à la poêle.",
+      "3. Garnir avec la Mozzarella, la tomate et 1/3 du sachet de salade verte.",
+      "4. Déguster immédiatement !"
     ],
-    bergamoTip: "Utilise 1 des 2 boules de mozza et 2 tranches de speck sur les 4 du paquet !"
+    bergamoTip: "Consomme la Mozzarella fraîche dès le mardi !"
   },
   {
-    id: "pates-sauce-maison",
-    name: "Pâtes à la sauce toute faite",
-    category: "Pâtes & Riz",
-    prepTime: 12,
+    id: "bruschetta-pomodoro",
+    name: "Bruschetta al pomodoro & origan",
+    category: "Salades & Fraîcheur",
+    prepTime: 10,
     cost: "€",
     servings: 1,
-    tags: ["Féculent"],
+    tags: ["Légume", "Féculent"],
     ingredients: [
-      { name: "Pâtes (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Sauce toute faite (stock)", amount: 1, unit: "pot", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Pain frais ou baguette", amount: 2, unit: "tranches", rayon: "Boulangerie & Épicerie", bought: true },
+      { name: "Tomates fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Origan (stock)", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuire 100g de pâtes du stock dans l'eau bouillante salée.",
-      "2. Égoutter en gardant un peu d'eau de cuisson.",
-      "3. Réchauffer ta sauce toute faite du stock et la mélanger aux pâtes chaudes.",
-      "4. Servir immédiatement avec du parmesan du stock."
+      "1. Couper 2 tomates fraîches en petits dés.",
+      "2. Griller 2 tranches de pain au gril ou à la poêle.",
+      "3. Garnir le pain des dés de tomates, arroser d'huile d'olive, d'origan du stock, sel et poivre.",
+      "4. Servir immédiatement."
     ],
-    bergamoTip: "Repas express du jeudi 100% stock."
+    bergamoTip: "Un classique italien ultra simple et frais."
   },
   {
-    id: "dinde-poelee-pdt-courgettes",
-    name: "Escalope de dinde poêlée, pommes de terre & courgettes",
+    id: "gratin-chou-fleur-pdt-dinde",
+    name: "Gratin de chou-fleur, pommes de terre & dinde",
     category: "Viandes & Poêlées",
     prepTime: 20,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Escalopes de dinde ou poulet", amount: 1, unit: "paquet (2x100g ou 1x200g)", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Pommes de terre fraîches", amount: 250, unit: "g", rayon: "Fruits & Légumes", bought: true },
-      { name: "Courgettes fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true }
+      { name: "Dés de dinde ou poulet", amount: 1, unit: "barquette (150g)", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Chou-fleur (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
-      "1. Couper 2-3 pommes de terre et 1 courgette en petits dés.",
-      "2. Rissoler les pommes de terre 10 min à la poêle dans l'huile d'olive, puis ajouter la courgette 6 min.",
-      "3. Poêler la 1ère escalope de dinde (100g) 4-5 min de chaque côté jusqu'à ce qu'elle soit dorée.",
-      "4. Assaisonner et servir bien chaud."
+      "1. Cuire les pommes de terre en dés et le chou-fleur du congel 10 min à l'eau bouillante salée.",
+      "2. Faire dorer ta barquette de dés de dinde 5 min à la poêle.",
+      "3. Mélanger le tout dans un plat ou à la poêle avec un filet d'huile d'olive, saler et poivrer.",
+      "4. Servir bien chaud."
     ],
-    bergamoTip: "Prends la 1ère escalope de 100g de ton paquet !"
+    bergamoTip: "Utilise le chou-fleur de ton congélateur !"
   },
   {
-    id: "piadina-speck-mozza",
-    name: "Piadina italienne Speck, Mozzarella & Tomates",
+    id: "poelee-pdt-courgettes-oeufs",
+    name: "Poêlée de pommes de terre, courgettes & œufs au plat",
     category: "Express & Salés",
-    prepTime: 10,
+    prepTime: 15,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Piadine romagnole", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Speck italien", amount: 2, unit: "tranches", rayon: "Charcuterie & Traiteur", bought: true },
-      { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Pommes de terre fraîches", amount: 200, unit: "g", rayon: "Fruits & Légumes", bought: true },
+      { name: "Courgettes fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Œufs frais", amount: 2, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true }
+    ],
+    steps: [
+      "1. Couper 200g de pommes de terre et 1 courgette en petits dés.",
+      "2. Rissoler les pommes de terre 10 min à la poêle avec de l'huile d'olive, puis ajouter la courgette 5 min.",
+      "3. Casser 2 œufs de ta boîte directement par-dessus ou les cuire au plat à côté.",
+      "4. Servir bien chaud."
+    ],
+    bergamoTip: "Repas ultra économique (<1,50 €) de fin de semaine !"
+  },
+  {
+    id: "sandwich-thon-tomate-salade",
+    name: "Toast grillé au thon, tomate & salade",
+    category: "Express & Salés",
+    prepTime: 8,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Légume", "Féculent"],
+    ingredients: [
+      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false },
       { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
-      "1. Trancher la 2ème boule de Mozzarella et 1 tomate.",
-      "2. Chauffer 1 piadina du paquet dans une poêle à sec pendant 1 minute.",
-      "3. Garnir avec les 2 tranches de Speck restantes, la mozzarella, les tranches de tomate et le dernier 1/3 de salade.",
-      "4. Plier en deux et chauffer 1 min."
+      "1. Griller 2 tranches de pain du stock.",
+      "2. Émietter la boîte de thon du stock avec un filet d'huile d'olive.",
+      "3. Garnir le sandwich de thon et du 1/3 de salade verte.",
+      "4. Déguster immédiatement."
     ],
-    bergamoTip: "Finit le paquet de speck, la 2ème mozza et le sachet de salade !"
+    bergamoTip: "Repas sur le pouce ultra rapide du samedi midi."
   },
   {
-    id: "saumon-papillote-haricots-riz",
-    name: "Saumon en papillote au citron, haricots verts & riz",
+    id: "poisson-pane-haricots-riz",
+    name: "Poisson pané au citron, haricots verts & riz",
     category: "Poisson & Poêlées",
-    prepTime: 20,
+    prepTime: 15,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pavé de saumon (congélateur)", amount: 150, unit: "g", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Haricots verts (stock)", amount: 100, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Poisson pané (congélateur)", amount: 2, unit: "pièces", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Haricots verts (congélateur)", amount: 100, unit: "g", rayon: "Légumes", bought: false },
       { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuire 70g de riz basmati et réchauffer les haricots verts du stock.",
-      "2. Disposer le saumon sur papier cuisson. Arroser d'huile d'olive, citron, sel et poivre.",
-      "3. Fermer la papillote et enfourner 15 min à 180°C.",
-      "4. Servir chaud avec le riz et les haricots verts."
+      "1. Cuire 70g de riz basmati et réchauffer les haricots verts du congel.",
+      "2. Poêler 2 poissons panés du congel 8 min à feu moyen avec une noisette de beurre.",
+      "3. Arroser d'un filet de jus de citron.",
+      "4. Servir le tout chaud !"
     ],
-    bergamoTip: "Ton seul repas de poisson de la semaine, sain et léger !"
+    bergamoTip: "Utilise le poisson pané et les haricots verts de ton congélateur."
   },
   {
-    id: "pates-cremeuses-dinde-epinards",
-    name: "Pâtes crémeuses à la dinde & épinards frais",
+    id: "pates-thon-sauce-tomate-olives",
+    name: "Pâtes au thon, sauce tomate & olives vertes",
     category: "Pâtes & Riz",
-    prepTime: 18,
+    prepTime: 12,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Escalopes de dinde ou poulet", amount: 1, unit: "paquet (2x100g ou 1x200g)", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Épinards (congélateur)", amount: 80, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pâtes (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Sauce tomate (stock)", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Olives vertes", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: true }
     ],
     steps: [
-      "1. Cuire 80g de pâtes du stock al dente.",
-      "2. Couper la 2ème escalope de dinde (100g) en dés et la faire dorer 5 min à la poêle.",
-      "3. Ajouter les épinards du congel 3 min, un filet d'huile d'olive et 2 C. à soupe d'eau de cuisson.",
-      "4. Mélanger aux pâtes chaudes et servir."
+      "1. Cuire 90g de pâtes du stock al dente.",
+      "2. Réchauffer la sauce tomate du stock avec le thon et quelques olives vertes tranchées.",
+      "3. Mélanger la sauce aux pâtes chaudes.",
+      "4. Servir chaud."
     ],
-    bergamoTip: "Utilise la 2ème escalope de ton paquet + tes épinards du congel !"
+    bergamoTip: "Recette rapide du dimanche midi du fichier de Maman !"
   },
   {
-    id: "tarte-thon-sauce-tomate-fromage",
-    name: "Tarte au thon, sauce tomate & fromage râpé",
-    category: "Tartes & Salés",
-    prepTime: 25,
+    id: "croque-monsieur-jambon-fromage",
+    name: "Croque-monsieur au jambon & fromage à la poêle",
+    category: "Express & Salés",
+    prepTime: 8,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Féculent"],
     ingredients: [
-      { name: "Pâte feuilletée", amount: 1, unit: "rouleau", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Sauce tomate (stock)", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Fromage râpé (Mozzarella / Emmental)", amount: 1, unit: "sachet", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Jambon cuit & Fromage pour croque", amount: 1, unit: "paquet", rayon: "Charcuterie & Traiteur", bought: true },
+      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
-      "1. Étaler la pâte feuilletée dans un plat à tarte.",
-      "2. Étaler ta sauce tomate du stock et émietter la boîte de thon du stock.",
-      "3. Recouvrir généreusement du sachet de fromage râpé.",
-      "4. Enfourner 20 min à 190°C jusqu'à ce que le fromage soit bien gratiné et servir chaud."
+      "1. Monter le croque-monsieur avec 2 tranches de pain, le jambon et le fromage.",
+      "2. Faire dorer à la poêle 3 min de chaque côté avec une noisette de beurre jusqu'à ce que le fromage fonde.",
+      "3. Servir bien chaud avec le dernier 1/3 de salade verte."
     ],
-    bergamoTip: "Pâte feuilletée, thon (stock), sauce tomate (stock) & fromage râpé !"
+    bergamoTip: "Repas express 5 min sans four pour le dimanche soir !"
   }
 ];
 
@@ -207,11 +201,11 @@ function getRecipeById(id) {
 }
 
 const CURRENT_REAL_WEEK_MENU = {
-  lundi: { midi: null, soir: "aubergines-boeuf-riz" },
-  mardi: { midi: null, soir: "riz-cantonais-dinde" },
-  mercredi: { midi: null, soir: "salade-italienne-mozza-speck" },
-  jeudi: { midi: null, soir: "pates-sauce-maison" },
-  vendredi: { midi: null, soir: "dinde-poelee-pdt-courgettes" },
-  samedi: { midi: "piadina-speck-mozza", soir: "saumon-papillote-haricots-riz" },
-  dimanche: { midi: "pates-cremeuses-dinde-epinards", soir: "tarte-thon-sauce-tomate-fromage" }
+  lundi: { midi: null, soir: "poulet-pates-epinards" },
+  mardi: { midi: null, soir: "focaccia-mozza-tomates" },
+  mercredi: { midi: null, soir: "bruschetta-pomodoro" },
+  jeudi: { midi: null, soir: "gratin-chou-fleur-pdt-dinde" },
+  vendredi: { midi: null, soir: "poelee-pdt-courgettes-oeufs" },
+  samedi: { midi: "sandwich-thon-tomate-salade", soir: "poisson-pane-haricots-riz" },
+  dimanche: { midi: "pates-thon-sauce-tomate-olives", soir: "croque-monsieur-jambon-fromage" }
 };

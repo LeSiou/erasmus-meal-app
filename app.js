@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v16.0 Separate Cutlets & Diced Poultry)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v17.0 Week 3 Validated Menu)
  */
 
 function forceAppRefresh() {
