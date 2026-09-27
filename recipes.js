@@ -1,6 +1,6 @@
 /**
  * Erasmus Meal Planner - Validated Week 3 Menu (Bergamo)
- * 100% Validated by Alessio (v17.0)
+ * Freshness Rule: Bag of Salad consumed completely Tue-Wed-Thu (3 days max!)
  */
 
 const RECIPES_DB = [
@@ -49,7 +49,7 @@ const RECIPES_DB = [
   },
   {
     id: "bruschetta-pomodoro",
-    name: "Bruschetta al pomodoro & origan",
+    name: "Bruschetta al pomodoro & salade verte",
     category: "Salades & Fraîcheur",
     prepTime: 10,
     cost: "€",
@@ -58,19 +58,20 @@ const RECIPES_DB = [
     ingredients: [
       { name: "Pain frais ou baguette", amount: 2, unit: "tranches", rayon: "Boulangerie & Épicerie", bought: true },
       { name: "Tomates fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
       { name: "Origan (stock)", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Couper 2 tomates fraîches en petits dés.",
       "2. Griller 2 tranches de pain au gril ou à la poêle.",
-      "3. Garnir le pain des dés de tomates, arroser d'huile d'olive, d'origan du stock, sel et poivre.",
-      "4. Servir immédiatement."
+      "3. Garnir le pain des dés de tomates, origan du stock et huile d'olive.",
+      "4. Servir avec le 2ème 1/3 de salade verte."
     ],
-    bergamoTip: "Un classique italien ultra simple et frais."
+    bergamoTip: "Utilise le 2ème tiers de ton sachet de salade !"
   },
   {
     id: "gratin-chou-fleur-pdt-dinde",
-    name: "Gratin de chou-fleur, pommes de terre & dinde",
+    name: "Gratin de chou-fleur, pdt & dinde (+ salade)",
     category: "Viandes & Poêlées",
     prepTime: 20,
     cost: "€",
@@ -79,15 +80,16 @@ const RECIPES_DB = [
     ingredients: [
       { name: "Dés de dinde ou poulet", amount: 1, unit: "barquette (150g)", rayon: "Boucherie & Poisson", bought: true },
       { name: "Chou-fleur (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true }
+      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true },
+      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
     ],
     steps: [
-      "1. Cuire les pommes de terre en dés et le chou-fleur du congel 10 min à l'eau bouillante salée.",
+      "1. Cuire les pommes de terre en dés et le chou-fleur du congel 10 min.",
       "2. Faire dorer ta barquette de dés de dinde 5 min à la poêle.",
-      "3. Mélanger le tout dans un plat ou à la poêle avec un filet d'huile d'olive, saler et poivrer.",
-      "4. Servir bien chaud."
+      "3. Mélanger le tout avec un filet d'huile d'olive, saler et poivrer.",
+      "4. Servir chaud avec le dernier 1/3 du sachet de salade (le sachet est fini !)."
     ],
-    bergamoTip: "Utilise le chou-fleur de ton congélateur !"
+    bergamoTip: "Finit le sachet de salade avant qu'il ne se périme au week-end !"
   },
   {
     id: "poelee-pdt-courgettes-oeufs",
@@ -104,7 +106,7 @@ const RECIPES_DB = [
     ],
     steps: [
       "1. Couper 200g de pommes de terre et 1 courgette en petits dés.",
-      "2. Rissoler les pommes de terre 10 min à la poêle avec de l'huile d'olive, puis ajouter la courgette 5 min.",
+      "2. Rissoler les pommes de terre 10 min à la poêle dans l'huile d'olive, puis ajouter la courgette 5 min.",
       "3. Casser 2 œufs de ta boîte directement par-dessus ou les cuire au plat à côté.",
       "4. Servir bien chaud."
     ],
@@ -112,7 +114,7 @@ const RECIPES_DB = [
   },
   {
     id: "sandwich-thon-tomate-salade",
-    name: "Toast grillé au thon, tomate & salade",
+    name: "Toast grillé au thon & tomate",
     category: "Express & Salés",
     prepTime: 8,
     cost: "€",
@@ -120,16 +122,15 @@ const RECIPES_DB = [
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
       { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
+      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Griller 2 tranches de pain du stock.",
-      "2. Émietter la boîte de thon du stock avec un filet d'huile d'olive.",
-      "3. Garnir le sandwich de thon et du 1/3 de salade verte.",
+      "2. Émietter la boîte de thon du stock avec un filet d'huile d'olive et jus de citron.",
+      "3. Garnir le sandwich de thon.",
       "4. Déguster immédiatement."
     ],
-    bergamoTip: "Repas sur le pouce ultra rapide du samedi midi."
+    bergamoTip: "Repas sur le pouce du samedi midi 100% stock."
   },
   {
     id: "poisson-pane-haricots-riz",
@@ -184,13 +185,12 @@ const RECIPES_DB = [
     tags: ["Protéine", "Féculent"],
     ingredients: [
       { name: "Jambon cuit & Fromage pour croque", amount: 1, unit: "paquet", rayon: "Charcuterie & Traiteur", bought: true },
-      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Salade verte", amount: 0.33, unit: "sachet", rayon: "Fruits & Légumes", bought: true }
+      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Monter le croque-monsieur avec 2 tranches de pain, le jambon et le fromage.",
       "2. Faire dorer à la poêle 3 min de chaque côté avec une noisette de beurre jusqu'à ce que le fromage fonde.",
-      "3. Servir bien chaud avec le dernier 1/3 de salade verte."
+      "3. Servir bien chaud."
     ],
     bergamoTip: "Repas express 5 min sans four pour le dimanche soir !"
   }
