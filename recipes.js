@@ -1,195 +1,191 @@
 /**
- * Erasmus Meal Planner - Validated Week 3 Menu (Bergamo)
- * Salad Completely Removed from Shopping List & Meals!
+ * Erasmus Meal Planner - Validated Week 4 Menu (Bergamo)
+ * Portions: 150g-200g of meat per meal (Pack of 350-400g for 2 Tupperware meals)
  */
 
 const RECIPES_DB = [
   {
-    id: "poulet-pates-epinards",
-    name: "Poulet, pâtes & épinards",
-    category: "Pâtes & Volaille",
-    prepTime: 15,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Dés de dinde ou poulet (stock)", amount: 120, unit: "g", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Épinards (congélateur)", amount: 80, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pâtes (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Cuire 80g de pâtes du stock dans l'eau bouillante salée.",
-      "2. Réchauffer tes dés de poulet et les épinards du congel 4 min à la poêle avec un filet d'huile d'olive.",
-      "3. Mélanger le tout aux pâtes égouttées.",
-      "4. Servir bien chaud !"
-    ],
-    bergamoTip: "Repas reporté de la semaine dernière (100% stock) !"
-  },
-  {
-    id: "focaccia-mozza-tomates",
-    name: "Focaccia italienne Mozzarella & Tomates",
-    category: "Express & Salés",
-    prepTime: 8,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Focaccia ou pain frais", amount: 1, unit: "pièce", rayon: "Boulangerie & Épicerie", bought: true },
-      { name: "Mozzarella", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Tomates fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true }
-    ],
-    steps: [
-      "1. Trancher la boule de Mozzarella et 1 tomate fraîche.",
-      "2. Ouvrir la Focaccia et la faire tiédir 1 minute à la poêle.",
-      "3. Garnir avec la Mozzarella et les rondelles de tomate.",
-      "4. Déguster immédiatement !"
-    ],
-    bergamoTip: "Consomme la Mozzarella fraîche dès le mardi !"
-  },
-  {
-    id: "bruschetta-pomodoro",
-    name: "Bruschetta al pomodoro & origan",
-    category: "Salades & Fraîcheur",
-    prepTime: 10,
-    cost: "€",
-    servings: 1,
-    tags: ["Légume", "Féculent"],
-    ingredients: [
-      { name: "Pain frais ou baguette", amount: 2, unit: "tranches", rayon: "Boulangerie & Épicerie", bought: true },
-      { name: "Tomates fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
-      { name: "Origan (stock)", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Couper 2 tomates fraîches en petits dés.",
-      "2. Griller 2 tranches de pain au gril ou à la poêle.",
-      "3. Garnir le pain des dés de tomates, origan du stock, huile d'olive, sel et poivre.",
-      "4. Servir immédiatement !"
-    ],
-    bergamoTip: "Pain, tomates, origan & huile d'olive."
-  },
-  {
-    id: "gratin-chou-fleur-pdt-dinde",
-    name: "Gratin de chou-fleur, pdt & dinde",
-    category: "Viandes & Poêlées",
-    prepTime: 20,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Dés de dinde ou poulet", amount: 1, unit: "barquette (150g)", rayon: "Boucherie & Poisson", bought: true },
-      { name: "Chou-fleur (congélateur)", amount: 150, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Pommes de terre fraîches", amount: 150, unit: "g", rayon: "Fruits & Légumes", bought: true }
-    ],
-    steps: [
-      "1. Cuire les pommes de terre en dés et le chou-fleur du congel 10 min.",
-      "2. Faire dorer ta barquette de dés de dinde 5 min à la poêle.",
-      "3. Mélanger le tout avec un filet d'huile d'olive, saler et poivrer.",
-      "4. Servir chaud."
-    ],
-    bergamoTip: "Utilise le chou-fleur de ton congel !"
-  },
-  {
-    id: "poelee-pdt-courgettes-oeufs",
-    name: "Poêlée de pommes de terre, courgettes & œufs au plat",
-    category: "Express & Salés",
-    prepTime: 15,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Pommes de terre fraîches", amount: 200, unit: "g", rayon: "Fruits & Légumes", bought: true },
-      { name: "Courgettes fraîches", amount: 1, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
-      { name: "Œufs frais", amount: 2, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true }
-    ],
-    steps: [
-      "1. Couper 200g de pommes de terre et 1 courgette en petits dés.",
-      "2. Rissoler les pommes de terre 10 min à la poêle dans l'huile d'olive, puis ajouter la courgette 5 min.",
-      "3. Casser 2 œufs de ta boîte directement par-dessus ou les cuire au plat à côté.",
-      "4. Servir bien chaud."
-    ],
-    bergamoTip: "Repas ultra économique (<1,50 €) de fin de semaine !"
-  },
-  {
-    id: "sandwich-thon-tomate-salade",
-    name: "Toast grillé au thon & tomate",
-    category: "Express & Salés",
-    prepTime: 8,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Griller 2 tranches de pain du stock.",
-      "2. Émietter la boîte de thon du stock avec un filet d'huile d'olive et jus de citron.",
-      "3. Garnir le sandwich de thon.",
-      "4. Déguster immédiatement."
-    ],
-    bergamoTip: "Repas sur le pouce du samedi midi 100% stock."
-  },
-  {
-    id: "poisson-pane-haricots-riz",
-    name: "Poisson pané au citron, haricots verts & riz",
-    category: "Poisson & Poêlées",
-    prepTime: 15,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Poisson pané (congélateur)", amount: 2, unit: "pièces", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Haricots verts (congélateur)", amount: 100, unit: "g", rayon: "Légumes", bought: false },
-      { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Cuire 70g de riz basmati et réchauffer les haricots verts du congel.",
-      "2. Poêler 2 poissons panés du congel 8 min à feu moyen avec une noisette de beurre.",
-      "3. Arroser d'un filet de jus de citron.",
-      "4. Servir le tout chaud !"
-    ],
-    bergamoTip: "Utilise le poisson pané et les haricots verts de ton congélateur."
-  },
-  {
-    id: "pates-thon-sauce-tomate-olives",
-    name: "Pâtes au thon, sauce tomate & olives vertes",
+    id: "pates-pesto-legumes",
+    name: "Pâtes au pesto de légumes & Parmigiano",
     category: "Pâtes & Riz",
+    prepTime: 12,
+    cost: "€",
+    servings: 1,
+    tags: ["Féculent"],
+    ingredients: [
+      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Sauce pesto de légumes (stock)", amount: 2, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Parmigiano / Grana grattugiato", amount: 1, unit: "sachet", rayon: "Crémerie & Fromages", bought: true }
+    ],
+    steps: [
+      "1. Cuire 90g de pâtes du stock dans l'eau bouillante salée.",
+      "2. Égoutter en gardant 2 C. à soupe d'eau de cuisson.",
+      "3. Mélanger avec ta sauce pesto de légumes du stock.",
+      "4. Saupoudrer de Parmigiano et servir chaud."
+    ],
+    bergamoTip: "100% stock, rapide & savoureux le lundi soir !"
+  },
+  {
+    id: "cordon-bleu-poelee",
+    name: "Cordon bleu & poêlée légumes/pommes de terre",
+    category: "Viandes & Poêlées",
     prepTime: 12,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Sauce tomate (stock)", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Olives vertes", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: true }
+      { name: "Cordon bleu (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Poêlée légumes/patates (congélateur)", amount: 200, unit: "g", rayon: "Légumes", bought: false }
     ],
     steps: [
-      "1. Cuire 90g de pâtes du stock al dente.",
-      "2. Réchauffer la sauce tomate du stock avec le thon et quelques olives vertes tranchées.",
-      "3. Mélanger la sauce aux pâtes chaudes.",
-      "4. Servir chaud."
+      "1. Faire réchauffer 200g de poêlée légumes/patates du congel à la poêle 8 min.",
+      "2. Poêler 1 cordon bleu du congel 5 min de chaque côté à feu moyen.",
+      "3. Servir bien chaud."
     ],
-    bergamoTip: "Recette rapide du dimanche midi du fichier de Maman !"
+    bergamoTip: "Utilise tes réserves du congélateur (0 €) !"
   },
   {
-    id: "croque-monsieur-jambon-fromage",
-    name: "Croque-monsieur au jambon & fromage à la poêle",
-    category: "Express & Salés",
-    prepTime: 8,
+    id: "steak-hache-pates",
+    name: "Steak haché & pâtes au Parmigiano",
+    category: "Viandes & Poêlées",
+    prepTime: 12,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Féculent"],
     ingredients: [
-      { name: "Jambon cuit & Fromage pour croque", amount: 1, unit: "paquet", rayon: "Charcuterie & Traiteur", bought: true },
-      { name: "Pain (stock)", amount: 2, unit: "tranches", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Steak haché (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Parmigiano / Grana grattugiato", amount: 1, unit: "sachet", rayon: "Crémerie & Fromages", bought: true }
     ],
     steps: [
-      "1. Monter le croque-monsieur avec 2 tranches de pain, le jambon et le fromage.",
-      "2. Faire dorer à la poêle 3 min de chaque côté avec une noisette de beurre jusqu'à ce que le fromage fonde.",
-      "3. Servir bien chaud (sans salade, rapide en 5 min !)."
+      "1. Cuire 90g de pâtes du stock.",
+      "2. Poêler 1 steak haché décongelé 3 min de chaque côté.",
+      "3. Servir le steak avec les pâtes saupoudrées de Parmigiano."
     ],
-    bergamoTip: "Repas express 5 min sans four ni salade pour le dimanche soir !"
+    bergamoTip: "Utilise ton 1er steak haché congelé."
+  },
+  {
+    id: "poelee-poulet-pdt-courgettes",
+    name: "Poêlée géante de poulet, pdt & courgettes (1/2)",
+    category: "Viandes & Poêlées",
+    prepTime: 20,
+    cost: "€",
+    servings: 2, // Batch cooking Thursday + Friday
+    tags: ["Protéine", "Légume", "Féculent"],
+    ingredients: [
+      { name: "Volaille (paquet de 350-400g)", amount: 1, unit: "paquet (350g)", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Pommes de terre fraîches", amount: 500, unit: "g", rayon: "Fruits & Légumes", bought: true },
+      { name: "Courgettes fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
+      { name: "Riz basmati (stock)", amount: 140, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+    ],
+    steps: [
+      "1. Couper 500g de pommes de terre et 2 courgettes en dés.",
+      "2. Faire rissoler les pommes de terre 10 min à la poêle dans l'huile d'olive, ajouter les courgettes 6 min et les dés de poulet (paquet entier 350g) 5 min.",
+      "3. Cuire 140g de riz basmati et mélanger le tout.",
+      "4. Manger la 1ère portion ce soir et garder la 2ème moitié dans un Tupperware pour vendredi soir !"
+    ],
+    bergamoTip: "Cuis en double ce soir (~175g de poulet par repas). 0 cuisine vendredi !"
+  },
+  {
+    id: "tupperware-poulet-pdt-courgettes",
+    name: "Tupperware réchauffé : Poêlée de poulet & légumes (2/2)",
+    category: "Viandes & Poêlées",
+    prepTime: 3,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Légume", "Féculent"],
+    ingredients: [
+      { name: "Volaille (paquet de 350-400g)", amount: 1, unit: "paquet (350g)", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Pommes de terre fraîches", amount: 500, unit: "g", rayon: "Fruits & Légumes", bought: true },
+      { name: "Courgettes fraîches", amount: 2, unit: "pièces", rayon: "Fruits & Légumes", bought: true }
+    ],
+    steps: [
+      "1. Sortir ton Tupperware du frigo.",
+      "2. Réchauffer 2 à 3 minutes au micro-ondes ou à la poêle.",
+      "3. Déguster immédiatement !"
+    ],
+    bergamoTip: "0 cuisine et 0 vaisselle le vendredi soir !"
+  },
+  {
+    id: "salade-riz-thon-oeuf",
+    name: "Salade de riz froide au thon & œuf dur",
+    category: "Express & Salés",
+    prepTime: 10,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Féculent"],
+    ingredients: [
+      { name: "Riz basmati (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Œufs frais", amount: 1, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true }
+    ],
+    steps: [
+      "1. Cuire 1 œuf dur (9 min à l'eau bouillante).",
+      "2. Mélanger le riz cuit froid du stock avec 1 boîte de thon émiettée et l'œuf dur en morceaux.",
+      "3. Assaisonner avec un filet d'huile d'olive, sel et poivre."
+    ],
+    bergamoTip: "Repas frais du samedi midi 100% rapide."
+  },
+  {
+    id: "saumon-haricots-riz",
+    name: "Saumon en papillote au citron, haricots verts & riz",
+    category: "Poisson & Poêlées",
+    prepTime: 20,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Légume", "Féculent"],
+    ingredients: [
+      { name: "Pavé de saumon (congélateur)", amount: 1, unit: "pavé (150g)", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Haricots verts (congélateur)", amount: 100, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Riz basmati (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+    ],
+    steps: [
+      "1. Cuire 70g de riz basmati et réchauffer les haricots verts du congel.",
+      "2. Disposer 1 saumon du congel sur papier cuisson avec citron et huile d'olive.",
+      "3. Enfourner 15 min à 180°C.",
+      "4. Servir chaud."
+    ],
+    bergamoTip: "Utilise 1 de tes 3 pavés de saumon congelés."
+  },
+  {
+    id: "pates-thon-sauce-tomate",
+    name: "Pâtes au thon, sauce tomate & origan",
+    category: "Pâtes & Riz",
+    prepTime: 12,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Féculent"],
+    ingredients: [
+      { name: "Pâtes (stock)", amount: 90, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte (130g)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Sauce tomate (stock)", amount: 1, unit: "bocal", rayon: "Épicerie & Féculents", bought: false }
+    ],
+    steps: [
+      "1. Cuire 90g de pâtes du stock.",
+      "2. Réchauffer la sauce tomate avec le thon émietté du stock.",
+      "3. Mélanger aux pâtes chaudes."
+    ],
+    bergamoTip: "Recette du dimanche midi du fichier de Maman !"
+  },
+  {
+    id: "omelette-epinards-parmesan",
+    name: "Omelette aux épinards & Parmigiano",
+    category: "Express & Salés",
+    prepTime: 8,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Légume"],
+    ingredients: [
+      { name: "Œufs frais", amount: 2, unit: "boîte (6 œufs)", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Épinards (congélateur)", amount: 80, unit: "g", rayon: "Légumes", bought: false },
+      { name: "Parmigiano / Grana grattugiato", amount: 1, unit: "sachet", rayon: "Crémerie & Fromages", bought: true }
+    ],
+    steps: [
+      "1. Faire revenir 80g d'épinards du congel 2 min à la poêle.",
+      "2. Battre 2 œufs avec du sel, poivre et verser par-dessus.",
+      "3. Rabattre en demi-lune et saupoudrer de Parmigiano."
+    ],
+    bergamoTip: "Repas express 5 min du dimanche soir."
   }
 ];
 
@@ -198,11 +194,11 @@ function getRecipeById(id) {
 }
 
 const CURRENT_REAL_WEEK_MENU = {
-  lundi: { midi: null, soir: "poulet-pates-epinards" },
-  mardi: { midi: null, soir: "focaccia-mozza-tomates" },
-  mercredi: { midi: null, soir: "bruschetta-pomodoro" },
-  jeudi: { midi: null, soir: "gratin-chou-fleur-pdt-dinde" },
-  vendredi: { midi: null, soir: "poelee-pdt-courgettes-oeufs" },
-  samedi: { midi: "sandwich-thon-tomate-salade", soir: "poisson-pane-haricots-riz" },
-  dimanche: { midi: "pates-thon-sauce-tomate-olives", soir: "croque-monsieur-jambon-fromage" }
+  lundi: { midi: null, soir: "pates-pesto-legumes" },
+  mardi: { midi: null, soir: "cordon-bleu-poelee" },
+  mercredi: { midi: null, soir: "steak-hache-pates" },
+  jeudi: { midi: null, soir: "poelee-poulet-pdt-courgettes" },
+  vendredi: { midi: null, soir: "tupperware-poulet-pdt-courgettes" },
+  samedi: { midi: "salade-riz-thon-oeuf", soir: "saumon-haricots-riz" },
+  dimanche: { midi: "pates-thon-sauce-tomate", soir: "omelette-epinards-parmesan" }
 };
