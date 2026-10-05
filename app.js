@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v21.0 Week 4 Ultra Budget Menu)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v22.0 Week 4 Ultra Budget Menu)
  */
 
 function forceAppRefresh() {
