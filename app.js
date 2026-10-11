@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v23.0 Week 5 Menu)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v24.0 Week 5 Menu + Custom Grocery Items)
  */
 
 function forceAppRefresh() {
@@ -197,6 +197,25 @@ function renderGroceryList() {
     });
   });
 
+  // Merge Extra Grocery Items (pantry restock, breakfast, reminders)
+  if (typeof EXTRA_GROCERY_ITEMS !== 'undefined' && Array.isArray(EXTRA_GROCERY_ITEMS)) {
+    EXTRA_GROCERY_ITEMS.forEach(ing => {
+      const key = `${ing.name.toLowerCase()}_${ing.unit}`;
+      if (!aggregated[key]) {
+        aggregated[key] = {
+          name: ing.name,
+          amount: ing.amount,
+          unit: ing.unit,
+          rayon: ing.rayon
+        };
+      } else {
+        if (typeof ing.amount === 'number' && typeof aggregated[key].amount === 'number') {
+          aggregated[key].amount += ing.amount;
+        }
+      }
+    });
+  }
+
   // Group by Rayon
   const groupedByRayon = {};
   Object.values(aggregated).forEach(item => {
@@ -220,15 +239,15 @@ function renderGroceryList() {
     
     let itemsHTML = '';
     items.forEach(ing => {
-      const itemId = `ing_${ing.name.replace(/\s+/g, '_')}`;
+      const itemId = `ing_${encodeURIComponent(ing.name).replace(/[^a-zA-Z0-9]/g, '_')}`;
       const isChecked = checkedGroceryItems[itemId] || false;
       if (isChecked) checkedCount++;
 
-      let displayAmount = ing.amount;
+      let displayQty = `${ing.amount || ''} ${ing.unit}`.trim();
       if (typeof ing.amount === 'number') {
         const rounded = Math.round(ing.amount);
         if (Math.abs(ing.amount - rounded) < 0.05) {
-          displayAmount = rounded;
+          displayQty = `${rounded} ${ing.unit}`.trim();
         }
       }
 
@@ -240,7 +259,7 @@ function renderGroceryList() {
               <span class="ing-name">${ing.name}</span>
             </div>
           </div>
-          <span class="ing-qty">${displayAmount} ${ing.unit}</span>
+          <span class="ing-qty">${displayQty}</span>
         </div>
       `;
     });

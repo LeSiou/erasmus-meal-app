@@ -207,3 +207,10 @@ const CURRENT_REAL_WEEK_MENU = {
   samedi: { midi: "pates-thon-sauce-tomate", soir: "saumon-epinards-riz" },
   dimanche: { midi: "lentilles-tomate-oeufs", soir: "frittata-pommes-de-terre" }
 };
+
+const EXTRA_GROCERY_ITEMS = [
+  { name: "Thon au naturel", amount: 1, unit: "pack (3 boîtes)", rayon: "Épicerie & Féculents" },
+  { name: "Regarder pour des pâtes et du riz", amount: "", unit: "À vérifier (prix/promo)", rayon: "Épicerie & Féculents" },
+  { name: "Céréales du matin (Extra chocolat & noisettes)", amount: 1, unit: "paquet", rayon: "Petit-déjeuner & Goûter" }
+];
+
