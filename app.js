@@ -1,5 +1,5 @@
 /**
- * Erasmus Meal & Grocery Planner - App Core Logic (v24.0 Week 5 Menu + Custom Grocery Items)
+ * Erasmus Meal & Grocery Planner - App Core Logic (v25.0 Week 6 Menu)
  */
 
 function forceAppRefresh() {
