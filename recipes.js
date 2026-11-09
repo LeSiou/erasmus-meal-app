@@ -1,223 +1,215 @@
 /**
- * Erasmus Meal Planner - Validated Week 7 Menu (Bergamo v26.0)
- * Semaine du 02/11 au 08/11 : œufs + légumineuses, congélateur (saumon, cordon bleu), sans oignon ni beurre.
- * Courses Carrefour Market : œufs, 2 pommes de terre, crème, pancetta, mozzarella, piadine, tomates cerises, 1 courgette, lentilles (~9,98 € total).
+ * Erasmus Meal Planner - Validated Week 8 Menu (Bergamo v27.0)
+ * Semaine du 09/11 au 15/11 : congélateur (filets meunière, steak haché, pancetta, bâtonnets), sans oignon ni beurre.
+ * Courses Carrefour Market : œufs, gnocchis, épinards surgelés, ricotta, mozzarella, thon, 1 courgette, 3 pommes de terre, petite passata (~10,25 € total).
  */
 
 const RECIPES_DB = [
   {
-    id: "frittata-pdt-ail",
-    name: "Frittata pommes de terre à l'ail",
-    category: "Œufs & Légumineuses",
-    prepTime: 20,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Féculent"],
-    ingredients: [
-      { name: "Boîte de 6 œufs frais", amount: 1, unit: "boîte", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Pommes de terre (au détail)", amount: 1, unit: "pièce moyenne (~150 g)", rayon: "Fruits & Légumes", bought: true },
-      { name: "Fromage râpé (stock)", amount: 2, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
-    ],
-    steps: [
-      "C'est quoi ? Une omelette épaisse à l'italienne : on ne la plie pas, elle cuit doucement à couvert et se coupe comme un gâteau.",
-      "1. Éplucher la pomme de terre (~150 g) et la couper en rondelles très fines (2-3 mm), plus c'est fin plus ça cuit vite.",
-      "2. Dans une poêle moyenne, chauffer 2 C. à soupe d'huile à feu moyen. Mettre les rondelles, saler et couvrir. Cuire 10 min en retournant 2-3 fois, jusqu'à ce qu'elles soient tendres et un peu dorées. Ajouter la gousse d'ail écrasée la dernière minute.",
-      "3. Pendant ce temps, battre 4 œufs dans un bol avec 2 C. à soupe de fromage râpé, sel, poivre et une pincée d'origan.",
-      "4. Verser les œufs sur les pommes de terre et répartir avec une spatule. Baisser à feu doux et couvrir.",
-      "5. Laisser cuire 6-8 min sans toucher, jusqu'à ce que le dessus soit pris (il ne doit plus être liquide quand tu secoues la poêle).",
-      "6. La faire glisser sur une assiette et la couper en parts."
-    ],
-    bergamoTip: "4 œufs + fromage = ~30 g de protéines. Les 2 œufs qui restent servent samedi midi."
-  },
-  {
-    id: "pates-saumon-creme",
-    name: "Pâtes au saumon & à la crème",
+    id: "filets-meuniere-riz",
+    name: "Filets meunière & riz nature",
     category: "Poisson & Poêlées",
     prepTime: 15,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Féculent"],
     ingredients: [
-      { name: "Pavé de saumon (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Crème liquide (panna da cucina) 20 cl", amount: 1, unit: "brique", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Pâtes (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
+      { name: "Filets meunière (congélateur)", amount: 2, unit: "pièces", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Riz (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "0. Le matin : sortir le pavé de saumon du congélateur et le mettre au frigo.",
-      "1. Cuire 100 g de pâtes à l'eau bouillante salée.",
-      "2. Pendant ce temps, couper le saumon en dés (enlever la peau). Le faire cuire 3-4 min dans une poêle avec un filet d'huile et la gousse d'ail écrasée.",
-      "3. Ajouter la moitié de la brique de crème (~10 cl), sel, poivre. Laisser frémir 2 min.",
-      "4. Égoutter les pâtes et les mélanger dans la poêle avec la sauce.",
-      "5. Refermer la brique de crème et la garder au frigo : elle sert dimanche midi pour le curry."
+      "1. Cuire 70 g de riz à l'eau bouillante salée, le temps indiqué sur le paquet.",
+      "2. Pendant ce temps, chauffer un filet d'huile dans une poêle à feu moyen.",
+      "3. Cuire les 2 filets meunière selon le paquet (en général 4-5 min par face), jusqu'à ce qu'ils soient bien dorés.",
+      "4. Égoutter le riz, ajouter sel, poivre et un filet d'huile d'olive. Servir avec les filets."
     ],
-    bergamoTip: "Un pavé de saumon = ~25 g de protéines, plus les pâtes."
+    bergamoTip: "Tout vient du congélo et du placard : rien à acheter pour ce soir."
   },
   {
-    id: "pasta-e-ceci",
-    name: "Pasta e ceci (pâtes aux pois chiches)",
-    category: "Œufs & Légumineuses",
+    id: "pates-carbonara-pancetta",
+    name: "Pâtes carbonara à la pancetta",
+    category: "Pâtes & Riz",
+    prepTime: 15,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Féculent"],
+    ingredients: [
+      { name: "Boîte de 6 œufs frais", amount: 1, unit: "boîte", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Pancetta en dés (congélateur)", amount: 1, unit: "barquette (80 g)", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Pâtes (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Fromage râpé (stock)", amount: 3, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
+    ],
+    steps: [
+      "1. Cuire 100 g de pâtes à l'eau bouillante salée.",
+      "2. Dans un bol, battre 3 œufs avec 3 C. à soupe de fromage râpé et beaucoup de poivre.",
+      "3. Faire dorer la pancetta 3-4 min à sec dans une grande poêle (elle rend son gras).",
+      "4. Garder un demi-verre d'eau de cuisson, égoutter les pâtes et les mettre dans la poêle avec la pancetta. Remuer 30 secondes.",
+      "5. COUPER LE FEU et attendre 30 secondes, puis verser les œufs en remuant vite. Ajouter un peu d'eau de cuisson jusqu'à obtenir une sauce crémeuse : si la poêle est trop chaude, les œufs font une omelette.",
+      "6. Pas de sel : la pancetta et le fromage salent déjà."
+    ],
+    bergamoTip: "La vraie carbonara se fait sans crème : c'est l'œuf et l'eau de cuisson qui font la sauce. ~40 g de protéines."
+  },
+  {
+    id: "gnocchis-facon-bolo",
+    name: "Gnocchis façon bolo",
+    category: "Viandes & Poêlées",
     prepTime: 20,
     cost: "€",
     servings: 1,
-    tags: ["Protéine", "Légumineuse", "Féculent"],
+    tags: ["Protéine", "Féculent"],
     ingredients: [
-      { name: "Pois chiches (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Pâtes courtes (stock)", amount: 80, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Passata (stock)", amount: 3, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Gnocchis de pomme de terre (gnocchi di patate) 500 g", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Petite bouteille de passata (~235 g)", amount: 1, unit: "bouteille", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Steak haché (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
       { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
       { name: "Fromage râpé (stock)", amount: 2, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
     ],
     steps: [
-      "C'est quoi ? Un plat italien de tous les jours, entre la soupe épaisse et les pâtes : les pâtes cuisent directement avec les pois chiches.",
-      "1. Dans une casserole, faire revenir la gousse d'ail écrasée 1 min dans 2 C. à soupe d'huile.",
-      "2. Ajouter les pois chiches rincés et égouttés, 3 C. à soupe de passata et une bonne pincée d'origan. Remuer 2 min.",
-      "3. Écraser à la fourchette environ la moitié des pois chiches dans la casserole (c'est ce qui rend le plat crémeux).",
-      "4. Ajouter 2 verres d'eau (~400 ml) et du sel, porter à ébullition.",
-      "5. Verser 80 g de pâtes courtes et les cuire dedans le temps indiqué sur le paquet, en remuant souvent. Rajouter un peu d'eau si ça devient trop sec : ça doit rester bien crémeux.",
-      "6. Hors du feu : poivre, un filet d'huile d'olive et 2 C. à soupe de fromage râpé."
+      "0. Le matin : sortir le steak haché du congélateur et le mettre au frigo.",
+      "1. Faire revenir la gousse d'ail écrasée 1 min dans un filet d'huile. Ajouter le steak haché et l'émietter à la spatule, 4 min à feu moyen.",
+      "2. Ajouter toute la passata, sel, poivre et une bonne pincée d'origan. Laisser mijoter 8 min à feu doux.",
+      "3. Pendant ce temps, faire bouillir de l'eau salée. Y plonger la moitié du paquet de gnocchis (250 g) : ils sont cuits dès qu'ils remontent à la surface (~2 min).",
+      "4. Les égoutter, les mélanger à la sauce et servir avec le fromage râpé.",
+      "5. Bien refermer le reste de gnocchis et le garder au frigo pour vendredi soir."
     ],
-    bergamoTip: "100 % placard, 0 € ce soir, et ~25 g de protéines."
+    bergamoTip: "Idée piochée dans les menus de maman, en version 20 min."
   },
   {
-    id: "cordon-bleu-ratatouille",
-    name: "Cordon bleu, ratatouille & semoule",
-    category: "Viandes & Poêlées",
-    prepTime: 15,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légume", "Féculent"],
-    ingredients: [
-      { name: "Cordon bleu (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Ratatouille en conserve (stock)", amount: 1, unit: "boîte (ou la moitié si grande)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Semoule (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
-    ],
-    steps: [
-      "1. Cuire le cordon bleu à la poêle dans un filet d'huile, à feu moyen, 5-6 min par face (ou selon le paquet).",
-      "2. Pendant ce temps, faire chauffer la ratatouille dans une petite casserole 5 min en remuant.",
-      "3. Verser 70 g de semoule dans un bol, couvrir du même volume d'eau bouillante salée avec un filet d'huile, couvrir 5 min puis égrainer à la fourchette.",
-      "4. Servir ensemble."
-    ],
-    bergamoTip: "Tout vient du congélo et du placard : 0 € ce soir."
-  },
-  {
-    id: "haricots-rouges-tomate-riz",
-    name: "Haricots rouges mijotés à la tomate, ail & origan, riz",
-    category: "Œufs & Légumineuses",
-    prepTime: 15,
-    cost: "€",
-    servings: 1,
-    tags: ["Protéine", "Légumineuse", "Féculent"],
-    ingredients: [
-      { name: "Haricots rouges (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Passata (stock)", amount: 1, unit: "bouteille (235 g)", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Riz (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Ail (stock)", amount: 2, unit: "gousses", rayon: "Fruits & Légumes", bought: false },
-      { name: "Fromage râpé (stock)", amount: 1, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
-    ],
-    steps: [
-      "1. Cuire 70 g de riz à l'eau bouillante salée.",
-      "2. Dans une casserole, faire revenir 2 gousses d'ail écrasées 1 min dans un filet d'huile.",
-      "3. Ajouter les haricots rouges rincés et égouttés, la passata, sel, poivre et 1 c. à café d'origan.",
-      "4. Laisser mijoter 10 min à feu doux en remuant de temps en temps, jusqu'à ce que la sauce épaississe.",
-      "5. Servir sur le riz avec un peu de fromage râpé par-dessus."
-    ],
-    bergamoTip: "Façon chili mais sans viande ni épices : 0 € ce soir."
-  },
-  {
-    id: "oeufs-brouilles-tomates-cerises-semoule",
-    name: "Œufs brouillés & tomates cerises poêlées, semoule",
-    category: "Œufs & Légumineuses",
+    id: "haricots-beurre-thon-semoule",
+    name: "Haricots beurre à l'ail, thon & semoule",
+    category: "Poisson & Poêlées",
     prepTime: 12,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Œufs frais (de la boîte)", amount: 2, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Tomates cerises (barquette 250 g)", amount: 1, unit: "barquette", rayon: "Fruits & Légumes", bought: true },
+      { name: "Thon au naturel", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Haricots beurre en boîte (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
       { name: "Semoule (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
+    ],
+    steps: [
+      "1. Verser 70 g de semoule dans un bol, couvrir du même volume d'eau bouillante salée avec un filet d'huile, couvrir 5 min puis égrainer à la fourchette.",
+      "2. Égoutter et rincer les haricots beurre.",
+      "3. Faire revenir la gousse d'ail écrasée 1 min dans 1 C. à soupe d'huile, puis ajouter les haricots, du sel, du poivre et de l'origan. Les faire sauter 4 min.",
+      "4. Égoutter le thon, l'ajouter en morceaux et réchauffer 1 min sans trop remuer.",
+      "5. Servir avec la semoule."
+    ],
+    bergamoTip: "Tes haricots beurre du placard, prêts en 12 min."
+  },
+  {
+    id: "gnocchis-poeles-epinards-mozza",
+    name: "Gnocchis poêlés, épinards & mozzarella fondue",
+    category: "Pâtes & Riz",
+    prepTime: 15,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Légume", "Féculent"],
+    ingredients: [
+      { name: "Gnocchis (reste de mercredi)", amount: 250, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Épinards surgelés (spinaci surgelati) 450 g", amount: 1, unit: "sachet", rayon: "Fruits & Légumes", bought: true },
+      { name: "Mozzarella 125 g", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
       { name: "Fromage râpé (stock)", amount: 1, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
     ],
     steps: [
-      "1. Préparer 70 g de semoule (même volume d'eau bouillante salée + filet d'huile, 5 min à couvert, puis égrainer).",
-      "2. Couper la moitié de la barquette de tomates cerises en deux. Les faire sauter 3 min dans une poêle huilée avec sel et origan. Garder l'autre moitié de la barquette pour la piadina de dimanche soir.",
-      "3. Battre 2 œufs avec sel, poivre et 1 C. à soupe de fromage râpé.",
-      "4. Baisser le feu, verser les œufs sur les tomates et remuer sans arrêt avec une spatule 1-2 min : retirer du feu quand c'est encore un peu baveux (ça finit de cuire tout seul).",
-      "5. Servir avec la semoule."
+      "1. Faire décongeler 200 g d'épinards dans une casserole avec un fond d'eau et du sel, 5 min à couvert. Bien les égoutter en les pressant avec une cuillère. Remettre le reste du sachet au congélateur.",
+      "2. Plonger les gnocchis dans l'eau bouillante salée : les sortir dès qu'ils remontent à la surface (~2 min), puis les égoutter.",
+      "3. Dans une poêle, faire dorer les gnocchis 3 min dans 1 C. à soupe d'huile avec la gousse d'ail écrasée.",
+      "4. Ajouter les épinards, du poivre et 1 C. à soupe de fromage râpé. Mélanger 1 min.",
+      "5. Couper le feu, ajouter la mozzarella en dés, couvrir 1 min pour qu'elle fonde."
     ],
-    bergamoTip: "Repas léger du samedi midi, prêt en 12 min."
+    bergamoTip: "La mozzarella apporte à elle seule ~20 g de protéines."
   },
   {
-    id: "lentilles-pancetta-pdt",
-    name: "Lentilles mijotées à la pancetta & pommes de terre",
+    id: "omelette-courgette-pdt-ail",
+    name: "Omelette courgette-fromage & pommes de terre sautées à l'ail",
     category: "Œufs & Légumineuses",
     prepTime: 20,
     cost: "€",
     servings: 1,
-    tags: ["Protéine", "Légumineuse", "Féculent"],
+    tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Lentilles en boîte", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Pancetta en dés (paquet 2×80 g)", amount: 1, unit: "paquet", rayon: "Boucherie & Poisson", bought: true },
+      { name: "Œufs frais (de la boîte)", amount: 3, unit: "pièces", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Courgette fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
       { name: "Pommes de terre (au détail)", amount: 1, unit: "pièce moyenne (~150 g)", rayon: "Fruits & Légumes", bought: true },
-      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
-      { name: "Passata (stock)", amount: 2, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Fromage râpé (stock)", amount: 2, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
     ],
     steps: [
-      "1. Éplucher la pomme de terre (~150 g) et la couper en petits cubes (1 cm).",
-      "2. Dans une casserole, faire dorer 1 barquette de pancetta (80 g) 3 min à sec (elle rend son gras). Mettre l'autre barquette au congélateur.",
-      "3. Ajouter la gousse d'ail écrasée et les cubes de pomme de terre, remuer 1 min.",
-      "4. Ajouter les lentilles égouttées, 2 C. à soupe de passata, 1 verre d'eau (~200 ml), poivre et origan (pas trop de sel : la pancetta est déjà salée).",
-      "5. Couvrir et laisser mijoter 12-15 min à feu doux, jusqu'à ce que la pomme de terre soit tendre. Rajouter un peu d'eau si besoin."
+      "1. Couper la pomme de terre en petits cubes (1 cm). Les faire cuire 12 min à couvert dans une poêle avec 2 C. à soupe d'huile et du sel, en remuant de temps en temps. Ajouter l'ail écrasé la dernière minute.",
+      "2. Pendant ce temps, couper la courgette en fines rondelles. La faire sauter 5 min dans une autre poêle avec un filet d'huile et du sel.",
+      "3. Battre 3 œufs avec 2 C. à soupe de fromage râpé, du poivre et une pincée d'origan.",
+      "4. Verser les œufs sur la courgette, à feu moyen-doux. Laisser prendre 3-4 min, puis plier l'omelette en deux.",
+      "5. Servir avec les pommes de terre."
     ],
-    bergamoTip: "Le plat réconfortant du samedi soir, ~30 g de protéines."
+    bergamoTip: "Le plat du samedi midi avec les 3 derniers œufs de la boîte."
   },
   {
-    id: "curry-pois-chiches-courgette-riz",
-    name: "Curry crémeux de pois chiches & courgette, riz",
+    id: "batonnets-poisson-puree-huile-olive",
+    name: "Bâtonnets de poisson & purée à l'huile d'olive",
+    category: "Poisson & Poêlées",
+    prepTime: 20,
+    cost: "€",
+    servings: 1,
+    tags: ["Protéine", "Féculent"],
+    ingredients: [
+      { name: "Bâtonnets de poisson pané (congélateur)", amount: 5, unit: "pièces", rayon: "Boucherie & Poisson", bought: false },
+      { name: "Pommes de terre (au détail)", amount: 2, unit: "pièce moyenne (~150 g)", rayon: "Fruits & Légumes", bought: true },
+      { name: "Fromage râpé (stock)", amount: 1, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
+    ],
+    steps: [
+      "1. Éplucher 2 pommes de terre et les couper en petits cubes. Les faire cuire 12-15 min dans une casserole d'eau bouillante salée, jusqu'à ce qu'elles s'écrasent à la fourchette.",
+      "2. Pendant ce temps, cuire les 5 bâtonnets de poisson à la poêle dans un filet d'huile, 3-4 min par face (ou selon le paquet).",
+      "3. Garder un peu d'eau de cuisson, égoutter les pommes de terre et les écraser à la fourchette avec 2 C. à soupe d'huile d'olive.",
+      "4. Détendre avec un peu d'eau de cuisson, puis ajouter sel, poivre et 1 C. à soupe de fromage râpé. Servir avec les bâtonnets."
+    ],
+    bergamoTip: "Purée sans beurre : l'huile d'olive et le fromage suffisent."
+  },
+  {
+    id: "semoule-ratatouille-pois-chiches",
+    name: "Semoule, ratatouille & pois chiches",
     category: "Œufs & Légumineuses",
-    prepTime: 18,
+    prepTime: 10,
     cost: "€",
     servings: 1,
     tags: ["Protéine", "Légumineuse", "Légume", "Féculent"],
     ingredients: [
-      { name: "Pois chiches (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Courgette fraîche", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
-      { name: "Crème liquide (reste de mardi)", amount: 10, unit: "cl", rayon: "Crémerie & Fromages", bought: false },
-      { name: "Riz (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
+      { name: "Ratatouille en conserve (stock)", amount: 1, unit: "boîte (ou la moitié si grande)", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Pois chiches (stock, si tu veux)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Semoule (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
-      "1. Cuire 70 g de riz à l'eau bouillante salée.",
-      "2. Couper la courgette en dés. La faire sauter 5 min dans une poêle huilée avec la gousse d'ail écrasée.",
-      "3. Ajouter 1 c. à café bombée de curry et remuer 30 secondes.",
-      "4. Ajouter les pois chiches rincés et égouttés et le reste de crème (~10 cl), saler. Laisser mijoter 5 min.",
-      "5. Servir sur le riz."
+      "1. Verser 70 g de semoule dans un bol, couvrir du même volume d'eau bouillante salée avec un filet d'huile, couvrir 5 min puis égrainer à la fourchette.",
+      "2. Faire chauffer la ratatouille 5 min dans une petite casserole en remuant.",
+      "3. Si tu veux des pois chiches : les rincer, les égoutter et les ajouter à la ratatouille dès le début.",
+      "4. Servir sur la semoule, avec du poivre et une pincée d'origan."
     ],
-    bergamoTip: "Finit la brique de crème de mardi : rien ne se perd."
+    bergamoTip: "100 % placard, et ~28 g de protéines avec les pois chiches."
   },
   {
-    id: "piadina-thon-mozza-tomates-cerises",
-    name: "Piadina thon, mozzarella & tomates cerises",
+    id: "pates-ricotta-epinards",
+    name: "Pâtes à la ricotta & aux épinards",
     category: "Pâtes & Riz",
-    prepTime: 10,
+    prepTime: 15,
     cost: "€",
     servings: 1,
-    tags: ["Protéine"],
+    tags: ["Protéine", "Légume", "Féculent"],
     ingredients: [
-      { name: "Piadine (paquet de 3)", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Mozzarella 125 g", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Thon au naturel (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Tomates cerises (reste de samedi)", amount: 0.5, unit: "barquette", rayon: "Fruits & Légumes", bought: false }
+      { name: "Ricotta 250 g", amount: 1, unit: "pot", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Épinards surgelés (reste de vendredi)", amount: 250, unit: "g", rayon: "Fruits & Légumes", bought: false },
+      { name: "Pâtes (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
+      { name: "Fromage râpé (stock)", amount: 2, unit: "C. à soupe", rayon: "Crémerie & Fromages", bought: false }
     ],
     steps: [
-      "1. Égoutter le thon et la mozzarella. Couper la mozzarella en tranches et les tomates cerises en deux.",
-      "2. Chauffer une poêle sans huile à feu moyen et y poser 1 piadina.",
-      "3. Sur une moitié de la piadina : mozzarella, thon, tomates cerises, sel, poivre, origan.",
-      "4. Replier en demi-lune et cuire 2-3 min par face en appuyant avec une spatule, jusqu'à ce que la mozza fonde.",
-      "5. Faim ? Faire une 2e piadina avec le reste. La 3e se garde (ou se congèle)."
+      "1. Cuire 100 g de pâtes à l'eau bouillante salée.",
+      "2. Pendant ce temps, faire décongeler les épinards dans une poêle avec un fond d'eau, 5 min à couvert. Laisser évaporer l'eau restante.",
+      "3. Ajouter la gousse d'ail écrasée et un filet d'huile, puis faire revenir 1 min.",
+      "4. Couper le feu, ajouter toute la ricotta, du sel, du poivre et 2 C. à soupe de fromage râpé.",
+      "5. Garder un peu d'eau de cuisson, égoutter les pâtes et les mélanger à la sauce. Ajouter un peu d'eau de cuisson pour la rendre crémeuse."
     ],
-    bergamoTip: "La piadina vient de Romagne : c'est le casse-croûte italien par excellence."
+    bergamoTip: "Finit le sachet d'épinards, ~39 g de protéines."
   }
 ];
 
@@ -226,13 +218,13 @@ function getRecipeById(id) {
 }
 
 const CURRENT_REAL_WEEK_MENU = {
-  lundi: { midi: null, soir: "frittata-pdt-ail" },
-  mardi: { midi: null, soir: "pates-saumon-creme" },
-  mercredi: { midi: null, soir: "pasta-e-ceci" },
-  jeudi: { midi: null, soir: "cordon-bleu-ratatouille" },
-  vendredi: { midi: null, soir: "haricots-rouges-tomate-riz" },
-  samedi: { midi: "oeufs-brouilles-tomates-cerises-semoule", soir: "lentilles-pancetta-pdt" },
-  dimanche: { midi: "curry-pois-chiches-courgette-riz", soir: "piadina-thon-mozza-tomates-cerises" }
+  lundi: { midi: null, soir: "filets-meuniere-riz" },
+  mardi: { midi: null, soir: "pates-carbonara-pancetta" },
+  mercredi: { midi: null, soir: "gnocchis-facon-bolo" },
+  jeudi: { midi: null, soir: "haricots-beurre-thon-semoule" },
+  vendredi: { midi: null, soir: "gnocchis-poeles-epinards-mozza" },
+  samedi: { midi: "omelette-courgette-pdt-ail", soir: "batonnets-poisson-puree-huile-olive" },
+  dimanche: { midi: "semoule-ratatouille-pois-chiches", soir: "pates-ricotta-epinards" }
 };
 
 const EXTRA_GROCERY_ITEMS = [];
