@@ -1,7 +1,7 @@
 /**
  * Erasmus Meal Planner - Validated Week 9 Menu (Bergamo v28.0)
  * Semaine du 17/11 au 22/11 (lundi soir retiré) : congélateur (escalope de dinde, cordons bleus, steak haché, pancetta), sans oignon ni beurre.
- * Courses Carrefour Market : œufs, 2 courgettes, pois chiches, lentilles, crème, tortellini, piadine, mozzarella, citron, pesto, thon, tomates cerises (~14,45 € total).
+ * Courses Carrefour Market : œufs, 2 courgettes, lentilles, semoule, crème, tortellini, piadine, mozzarella, tomates cerises (~11,50 € total).
  */
 
 const RECIPES_DB = [
@@ -15,7 +15,7 @@ const RECIPES_DB = [
     tags: ["Protéine", "Féculent"],
     ingredients: [
       { name: "Escalope de dinde (congélateur)", amount: 1, unit: "pièce", rayon: "Boucherie & Poisson", bought: false },
-      { name: "Citron", amount: 1, unit: "pièce", rayon: "Fruits & Légumes", bought: true },
+      { name: "Jus de citron (stock)", amount: 1, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false },
       { name: "Riz (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false },
       { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
     ],
@@ -24,10 +24,10 @@ const RECIPES_DB = [
       "1. Cuire 70 g de riz à l'eau bouillante salée, le temps indiqué sur le paquet.",
       "2. Chauffer un filet d'huile dans une poêle à feu moyen-vif. Saler et poivrer l'escalope.",
       "3. La cuire 3-4 min par face, jusqu'à ce qu'elle soit bien dorée et plus du tout rose au centre.",
-      "4. Baisser le feu, ajouter la gousse d'ail écrasée et le jus d'un demi-citron. Laisser 30 secondes en retournant l'escalope dans le jus.",
+      "4. Baisser le feu, ajouter la gousse d'ail écrasée et 1 C. à soupe de jus de citron. Laisser 30 secondes en retournant l'escalope dans le jus.",
       "5. Égoutter le riz, puis verser dessus le jus de la poêle."
     ],
-    bergamoTip: "Garde l'autre moitié du citron pour les pâtes au pesto de dimanche. ~35 g de protéines."
+    bergamoTip: "~35 g de protéines."
   },
   {
     id: "curry-pois-chiches-oeufs-riz",
@@ -39,7 +39,7 @@ const RECIPES_DB = [
     tags: ["Protéine", "Féculent", "Végétarien"],
     ingredients: [
       { name: "Boîte de 6 œufs frais", amount: 1, unit: "boîte", rayon: "Crémerie & Fromages", bought: true },
-      { name: "Pois chiches en boîte (ceci) 400 g", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Pois chiches en boîte (stock)", amount: 1, unit: "boîte", rayon: "Épicerie & Féculents", bought: false },
       { name: "Crème liquide (panna da cucina) 200 ml", amount: 1, unit: "brique", rayon: "Crémerie & Fromages", bought: true },
       { name: "Passata (stock)", amount: 3, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false },
       { name: "Curry (stock)", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false },
@@ -110,7 +110,7 @@ const RECIPES_DB = [
       { name: "Passata (stock)", amount: 150, unit: "g", rayon: "Épicerie & Féculents", bought: false },
       { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
       { name: "Origan (stock)", amount: 1, unit: "pincée", rayon: "Épicerie & Féculents", bought: false },
-      { name: "Semoule (stock)", amount: 70, unit: "g", rayon: "Épicerie & Féculents", bought: false }
+      { name: "Semoule 500 g", amount: 1, unit: "paquet", rayon: "Épicerie & Féculents", bought: true }
     ],
     steps: [
       "1. Faire revenir l'ail écrasé dans un filet d'huile 30 secondes.",
@@ -175,19 +175,19 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Féculent", "Légumes"],
     ingredients: [
-      { name: "Pesto (pesto alla genovese)", amount: 1, unit: "pot", rayon: "Épicerie & Féculents", bought: true },
-      { name: "Thon au naturel (2×80 g)", amount: 1, unit: "lot", rayon: "Épicerie & Féculents", bought: true },
+      { name: "Pesto (stock)", amount: 2, unit: "C. à soupe", rayon: "Épicerie & Féculents", bought: false },
+      { name: "Thon au naturel (stock)", amount: 2, unit: "boîtes (80 g)", rayon: "Épicerie & Féculents", bought: false },
       { name: "Tomates cerises 250 g", amount: 1, unit: "barquette", rayon: "Fruits & Légumes", bought: true },
-      { name: "Citron (reste de mardi)", amount: 0.5, unit: "pièce", rayon: "Fruits & Légumes", bought: false },
+      { name: "Jus de citron (stock)", amount: 1, unit: "C. à café", rayon: "Épicerie & Féculents", bought: false },
       { name: "Pâtes (stock)", amount: 100, unit: "g", rayon: "Épicerie & Féculents", bought: false }
     ],
     steps: [
       "1. Cuire 100 g de pâtes à l'eau bouillante salée.",
       "2. Pendant ce temps, couper une dizaine de tomates cerises en deux et égoutter les 2 boîtes de thon.",
       "3. Garder un peu d'eau de cuisson, puis égoutter les pâtes.",
-      "4. Hors du feu, mélanger les pâtes avec 2 C. à soupe de pesto et un peu d'eau de cuisson, puis ajouter le thon, les tomates cerises et un filet de citron."
+      "4. Hors du feu, mélanger les pâtes avec 2 C. à soupe de pesto et un peu d'eau de cuisson, puis ajouter le thon, les tomates cerises et un trait de jus de citron."
     ],
-    bergamoTip: "Le pot de pesto se garde ouvert au frigo, recouvert d'un filet d'huile. Les tomates cerises qui restent se grignotent. ~30 g de protéines."
+    bergamoTip: "Les tomates cerises qui restent se grignotent. ~30 g de protéines."
   }
 ];
 
