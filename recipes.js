@@ -1,7 +1,7 @@
 /**
  * Erasmus Meal Planner - Validated Week 10 Menu (Bergamo v29.0)
  * Semaine du 23/11 au 29/11 : congélateur (saumon, poulet), sans oignon, beurre ni feta.
- * Courses Carrefour Market : crème, œufs, 3 pommes de terre, 3 courgettes, tomates cerises, ricotta, jambon cuit, pancetta, mozzarella, haricots rouges, pois chiches (~15,50 € total).
+ * Courses Carrefour Market : crème, 6 œufs, 3 pommes de terre, 3 courgettes, tomates cerises, ricotta, jambon cuit, pancetta, mozzarella, haricots rouges, pois chiches (~14,50 € total).
  */
 
 const RECIPES_DB = [
@@ -37,7 +37,7 @@ const RECIPES_DB = [
     servings: 1,
     tags: ["Protéine", "Féculent", "Végétarien"],
     ingredients: [
-      { name: "Boîte de 10 œufs frais", amount: 1, unit: "boîte", rayon: "Crémerie & Fromages", bought: true },
+      { name: "Boîte de 6 œufs frais", amount: 1, unit: "boîte", rayon: "Crémerie & Fromages", bought: true },
       { name: "Mozzarella 125 g", amount: 1, unit: "boule", rayon: "Crémerie & Fromages", bought: true },
       { name: "Passata (stock)", amount: 300, unit: "g", rayon: "Épicerie & Féculents", bought: false },
       { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false },
@@ -48,10 +48,10 @@ const RECIPES_DB = [
       "1. Cuire 70 g de riz à l'eau bouillante salée.",
       "2. Faire revenir l'ail écrasé dans un filet d'huile 30 secondes, ajouter ~300 g de passata, l'origan, sel et poivre. Laisser épaissir 5 min.",
       "3. Mettre de côté la moitié de la sauce dans une boîte au frigo (pour vendredi).",
-      "4. Creuser 3 trous dans la sauce restante, y casser 3 œufs, poser la mozzarella en morceaux autour, couvrir et cuire 5-6 min à feu doux jusqu'à ce que les blancs soient pris.",
+      "4. Creuser 2 trous dans la sauce restante, y casser 2 œufs, poser la mozzarella en morceaux autour, couvrir et cuire 5-6 min à feu doux jusqu'à ce que les blancs soient pris.",
       "5. Servir sur le riz."
     ],
-    bergamoTip: "Garde bien la moitié de la sauce pour la semoule de vendredi. ~32 g de protéines."
+    bergamoTip: "Garde bien la moitié de la sauce pour la semoule de vendredi. ~26 g de protéines."
   },
   {
     id: "chili-haricots-rouges-poulet-riz",
@@ -135,18 +135,18 @@ const RECIPES_DB = [
     tags: ["Protéine", "Féculent", "Végétarien"],
     ingredients: [
       { name: "Pommes de terre (à l'unité)", amount: 3, unit: "pièces", rayon: "Fruits & Légumes", bought: true },
-      { name: "Œufs frais (de la boîte)", amount: 4, unit: "œufs", rayon: "Crémerie & Fromages", bought: false },
+      { name: "Œufs frais (de la boîte)", amount: 3, unit: "œufs", rayon: "Crémerie & Fromages", bought: false },
       { name: "Tomates cerises (de la barquette)", amount: 6, unit: "pièces", rayon: "Fruits & Légumes", bought: false },
       { name: "Ail (stock)", amount: 1, unit: "gousse", rayon: "Fruits & Légumes", bought: false }
     ],
     steps: [
       "1. Éplucher les pommes de terre et les couper en fines rondelles (ou petits dés).",
       "2. Les cuire 10-12 min à couvert à feu moyen dans une poêle avec un bon filet d'huile, en remuant de temps en temps, jusqu'à ce qu'elles soient tendres. Ajouter l'ail écrasé à la fin.",
-      "3. Battre 4 œufs avec sel et poivre, y verser les pommes de terre et mélanger.",
+      "3. Battre 3 œufs avec sel et poivre, y verser les pommes de terre et mélanger.",
       "4. Remettre le tout dans la poêle huilée, couvrir et cuire 4-5 min à feu doux. Retourner avec une assiette et cuire encore 2 min.",
       "5. Servir avec les tomates cerises coupées en deux."
     ],
-    bergamoTip: "~27 g de protéines."
+    bergamoTip: "~21 g de protéines."
   },
   {
     id: "riz-cremeux-pancetta-courgette",
